@@ -1,0 +1,795 @@
+{
+    "1": {
+        "1": {
+            "response": "Paraparaumu"
+        },
+        "2": {
+            "response": "Flat"
+        },
+        "3": {
+            "response": "Sandy"
+        },
+        "4": {
+            "response": "Moderate"
+        },
+        "5": {
+            "response": "2004-"
+        },
+        "6": {
+            "response": "Engineer"
+        },
+        "7": {
+            "response": "Solid"
+        },
+        "8": {
+            "response": "Timber piles"
+        },
+        "9": {
+            "response": "Timber truss/beams"
+        },
+        "10": {
+            "response": "None"
+        },
+        "11": {
+            "response": "None"
+        },
+        "12": {
+            "response": "None"
+        },
+        "13": {
+            "response": "Timber"
+        },
+        "14": {
+            "response": "Timber truss/beams"
+        },
+        "15": {
+            "response": "Gib"
+        },
+        "16": {
+            "response": "Gib"
+        },
+        "17": {
+            "response": "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)"
+        },
+        "18": {
+            "response": "Timber (Example: weatherboards)"
+        },
+        "19": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+        },
+        "20": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+        },
+        "21": {
+            "response": {
+                "x": 25,
+                "y": 20
+            }
+        }
+
+
+    },
+    "2": {
+        "1": {
+            "response": "Paraparaumu"
+        },
+        "2": {
+            "response": "Flat"
+        },
+        "3": {
+            "response": "Sandy"
+        },
+        "4": {
+            "response": "Moderate"
+        },
+        "5": {
+            "response": "2004-"
+        },
+        "6": {
+            "response": "Engineer"
+        },
+        "7": {
+            "response": "Solid"
+        },
+        "8": {
+            "response": "Timber piles"
+        },
+        "9": {
+            "response": "Timber truss/beams"
+        },
+        "10": {
+            "response": "None"
+        },
+        "11": {
+            "response": "None"
+        },
+        "12": {
+            "response": "None"
+        },
+        "13": {
+            "response": "Timber"
+
+        },
+        "14": {
+            "response": "Timber truss/beams"
+
+        },
+        "15": {
+            "response": "Timber"
+
+        },
+        "16": {
+            "response": "Timber truss/beams"
+
+        },
+        "17": {
+            "response": "Gib"
+
+        },
+        "18": {
+            "response": "Gib"
+
+        },
+        "19": {
+            "response": "Gib"
+
+        },
+        "20": {
+            "response": "Gib"
+
+        },
+        "21": {
+            "response": "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)"
+
+        },
+        "22": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "23": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "24": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+        },
+        "25": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "26": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "27": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+        },
+        "28": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+        }
+
+
+    },
+    "3": {
+        "1": {
+            "response": "Paraparaumu"
+        },
+        "2": {
+            "response": "Flat"
+        },
+        "3": {
+            "response": "Sandy"
+        },
+        "4": {
+            "response": "Moderate"
+        },
+        "5": {
+            "response": "2004-"
+        },
+        "6": {
+            "response": "Engineer"
+        },
+        "7": {
+            "response": "Solid"
+        },
+        "8": {
+            "response": "Timber piles"
+        },
+        "9": {
+            "response": "Timber truss/beams"
+        },
+        "10": {
+            "response": "None"
+        },
+        
+        "11": {
+            "response": "None"
+        },
+        "12": {
+            "response": "None"
+        },
+        "13": {
+            "response": "Timber"
+
+        },
+        "14": {
+            "response": "Timber truss/beams"
+
+        },
+        "15": {
+            "response": "Timber"
+
+        },
+        "16": {
+            "response": "Timber truss/beams"
+
+        },
+        "17": {
+            "response": "Timber"
+
+        },
+        "18": {
+            "response": "Timber truss/beams"
+
+        },
+        "19": {
+            "response": "Gib"
+
+        },
+        "20": {
+            "response": "Gib"
+
+        },
+        "21": {
+            "response": "Gib"
+
+        },
+        "22": {
+            "response": "Gib"
+
+        },
+        "23": {
+            "response": "Gib"
+
+        },
+        "24": {
+            "response": "Gib"
+
+        },
+        "25": {
+            "response": "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)"
+
+        },
+        "26": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "27": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "28": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "29": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "30": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "31": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "32": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "33": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+
+        },
+        "34": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+
+        },
+        "35": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+
+        }
+    },
+    "1b": {
+        "1": {
+            "response": "Paraparaumu"
+        },
+        "2": {
+            "response": "Flat"
+        },
+        "3": {
+            "response": "Sandy"
+        },
+        "4": {
+            "response": "Moderate"
+        },
+        "5": {
+            "response": "2004-"
+        },
+        "6": {
+            "response": "Engineer"
+        },
+        "7": {
+            "response": "Solid"
+        },
+        "8": {
+            "response": "Timber piles"
+        },
+        "9": {
+            "response": "Timber truss/beams"
+        },
+        "10": {
+            "response": "None"
+        },
+        "11": {
+            "response": "None"
+        },
+        "12": {
+            "response": "None"
+        },
+        "13": {
+            "response": "Timber"
+
+        },
+        "14": {
+            "response": "Timber truss/beams"
+
+        },
+        "15": {
+            "response": "Timber"
+
+        },
+        "16": {
+            "response": "Timber truss/beams"
+
+        },
+        "17": {
+            "response": "Gib"
+
+        },
+        "18": {
+            "response": "Gib"
+
+        },
+        "19": {
+            "response": "Gib"
+
+        },
+        "20": {
+            "response": "Gib"
+
+        },
+        "21": {
+            "response": "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)"
+
+        },
+        "22": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "23": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "24": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+        },
+        "25": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+        },
+        "26": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+        },
+        "27": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+        },
+        "28": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+        }
+
+    },
+    "2b": {
+        "1": {
+            "response": "Paraparaumu"
+        },
+        "2": {
+            "response": "Flat"
+        },
+        "3": {
+            "response": "Sandy"
+        },
+        "4": {
+            "response": "Moderate"
+        },
+        "5": {
+            "response": "2004-"
+        },
+        "6": {
+            "response": "Engineer"
+        },
+        "7": {
+            "response": "Solid"
+        },
+        "8": {
+            "response": "Timber piles"
+        },
+        "9": {
+            "response": "Timber truss/beams"
+        },
+        "10": {
+            "response": "None"
+        },
+        "11": {
+            "response": "None"
+        },
+        "12": {
+            "response": "None"
+        },
+        "13": {
+            "response": "Timber"
+
+        },
+        "14": {
+            "response": "Timber truss/beams"
+
+        },
+        "15": {
+            "response": "Timber"
+
+        },
+        "16": {
+            "response": "Timber truss/beams"
+
+        },
+        "17": {
+            "response": "Timber"
+
+        },
+        "18": {
+            "response": "Timber truss/beams"
+
+        },
+        "19": {
+            "response": "Gib"
+
+        },
+        "20": {
+            "response": "Gib"
+
+        },
+        "21": {
+            "response": "Gib"
+
+        },
+        "22": {
+            "response": "Gib"
+
+        },
+        "23": {
+            "response": "Gib"
+
+        },
+        "24": {
+            "response": "Gib"
+
+        },
+        "25": {
+            "response": "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)"
+
+        },
+        "26": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "27": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "28": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "29": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "30": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "31": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "32": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "33": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+
+        },
+        "34": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+
+        },
+        "35": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+
+        }
+    },
+    "3b": {
+        "1": {
+            "response": "Paraparaumu"
+        },
+        "2": {
+            "response": "Flat"
+        },
+        "3": {
+            "response": "Sandy"
+        },
+        "4": {
+            "response": "Moderate"
+        },
+        "5": {
+            "response": "2004-"
+        },
+        "6": {
+            "response": "Engineer"
+        },
+        "7": {
+            "response": "Solid"
+        },
+        "8": {
+            "response": "Timber piles"
+        },
+        "9": {
+            "response": "Timber truss/beams"
+        },
+        "10": {
+            "response": "None"
+        },
+        "11": {
+            "response": "None"
+        },
+        "12": {
+            "response": "None"
+        },
+        "13": {
+            "response": "Timber"
+
+        },
+        "14": {
+            "response": "Timber truss/beams"
+
+        },
+        "15": {
+            "response": "Timber"
+
+        },
+        "16": {
+            "response": "Timber truss/beams"
+
+        },
+        "17": {
+            "response": "Timber"
+
+        },
+        "18": {
+            "response": "Timber truss/beams"
+
+        },
+        "19": {
+            "response": "Timber"
+
+        },
+        "20": {
+            "response": "Timber truss/beams"
+
+        },
+        "21": {
+            "response": "Gib"
+
+        },
+        "22": {
+            "response": "Gib"
+
+        },
+        "23": {
+            "response": "Gib"
+
+        },
+        "24": {
+            "response": "Gib"
+
+        },
+        "25": {
+            "response": "Gib"
+
+        },
+        "26": {
+            "response": "Gib"
+
+        },
+        "27": {
+            "response": "Gib"
+
+        },
+        "28": {
+            "response": "Gib"
+
+        },
+        "29": {
+            "response": "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)"
+
+        },
+        "30": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "31": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "32": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "33": {
+            "response": "Timber (Example: weatherboards)"
+
+        },
+        "34": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "35": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "36": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "37": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "38": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
+        },
+        "39": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+
+        },
+        "40": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+
+        },
+        "41": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+
+        },
+        "42": {
+            "response": {
+                "x": 15,
+                "y": 25
+            }
+
+        }
+    }
+}
