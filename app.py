@@ -4,11 +4,16 @@ import json
 import pymongo
 from bson import ObjectId
 import datetime
+from dotenv import load_dotenv, find_dotenv
+import os
+
 
 app = Flask(__name__)
 CORS(app)
+load_dotenv(find_dotenv())
 
-client = pymongo.MongoClient("mongodb+srv://admin:1234@cluster.c3vxx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+
+client = pymongo.MongoClient(os.getenv("mongo_url"))
 db = client.test
 collection = db['Quakestar']
 
@@ -147,17 +152,33 @@ def damage_all(floor_id, doc_id):
 
     return site*building*clad_struct_average(floor_id, doc_id)
 
-#Get score and damage
-@app.route('/sd/<floor_id>/<doc_id>', methods=['GET'])
-def sd(floor_id, doc_id):
+
+def get_score(floor_id, doc_id):
+    f = open('coefficients.json')
+    info = json.load(f)
+    doc = collection.find_one({"_id":ObjectId(doc_id)})
+    score = round(stregth_all(floor_id, doc_id)*floor_area_wall_bracing(floor_id, doc_id), 0)
+
+    return score
+
+def get_damage(floor_id, doc_id):
     f = open('coefficients.json')
     info = json.load(f)
     doc = collection.find_one({"_id":ObjectId(doc_id)})
     score = round(stregth_all(floor_id, doc_id)*floor_area_wall_bracing(floor_id, doc_id), 0)
     damage = round((2000/score)*damage_all(floor_id, doc_id),0)
+
+    return damage
+
+
+@app.route('/sd/<floor_id>/<doc_id>', methods=['GET'])
+def sd(floor_id, doc_id):
+    f = open('coefficients.json')
+    info = json.load(f)
+    doc = collection.find_one({"_id":ObjectId(doc_id)})
     res = {
-        "score": score,
-        "damage": damage
+        "score": get_score(floor_id, doc_id),
+        "damage": get_damage(floor_id, doc_id)
     }
 
     return jsonify(res)
@@ -226,6 +247,18 @@ def floor_area_wall_bracing(floor_id, doc_id):
     return 'success'
 
 
+@app.route('/results/<floor_id>/<doc_id>', methods=['GET'])
+def results(floor_id, doc_id):
+    doc = collection.find_one({"_id":ObjectId(doc_id)})
+    res = {
+        "firstName": doc['firstName'],
+        "lastName": doc['lastName'],
+        "address": doc['address'],
+        "last_updated": doc['last_updated'],
+        "score": get_score(floor_id, doc_id),
+        "damage": get_damage(floor_id, doc_id)
+    }
+    return jsonify(res)
 
 
 
