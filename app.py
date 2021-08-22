@@ -17,6 +17,9 @@ client = pymongo.MongoClient(os.getenv("mongo_url"))
 db = client.test
 collection = db['Quakestar']
 
+@app.route("/")
+def index():
+    return 'welcome to quakestar api'
 
 # Returns question
 @app.route("/<floor_id>/<que_id>")
