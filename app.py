@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import json
 import pymongo
 from bson import ObjectId
@@ -11,7 +11,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 load_dotenv(find_dotenv())
-
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 client = pymongo.MongoClient(os.getenv("mongo_url"))
 db = client.test
@@ -60,6 +60,7 @@ def user_construct(user, floor_id):
 
 #Register and initalize
 @app.route("/register/<floor_id>", methods=['GET','POST'])
+@cross_origin()
 def register(floor_id):
     json_data = request.json
     form_user = {
@@ -79,6 +80,7 @@ def register(floor_id):
 
 #Submit response
 @app.route('/submit/<floor_id>/<que_id>/<doc_id>', methods=['GET','POST'])
+@cross_origin()
 def submit(floor_id, que_id, doc_id):
 
     json_data = request.json
@@ -175,6 +177,7 @@ def get_damage(floor_id, doc_id):
 
 
 @app.route('/sd/<floor_id>/<doc_id>', methods=['GET'])
+@cross_origin()
 def sd(floor_id, doc_id):
     f = open('coefficients.json')
     info = json.load(f)
@@ -251,6 +254,7 @@ def floor_area_wall_bracing(floor_id, doc_id):
 
 
 @app.route('/results/<floor_id>/<doc_id>', methods=['GET'])
+@cross_origin()
 def results(floor_id, doc_id):
     doc = collection.find_one({"_id":ObjectId(doc_id)})
     res = {
