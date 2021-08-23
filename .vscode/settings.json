@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/db54c5ac-ba82-4534-bd7e-a414e65c894b/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/quakestar",
+    "appService.deploySubpath": "."
+}
