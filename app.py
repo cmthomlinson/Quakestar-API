@@ -64,10 +64,12 @@ def user_construct(user, floor_id):
 def register(floor_id):
     json_data = request.json
     form_user = {
-        "firstName": json_data['user']['firstName'],
-        "lastName": json_data['user']['lastName'],
-        "address": json_data['user']['address'],
+        "name": json_data['user']['name'],
         "email": json_data['user']['email'],
+        "address": json_data['user']['address'],
+        "suburb": json_data['user']['suburb'],
+        "city": json_data['user']['city'],
+        "postcode": json_data['user']['postcode'],
         "strength": 0,
         "damage": 0,
         "last_updated": datetime.datetime.now()
@@ -267,7 +269,10 @@ def results(floor_id, doc_id):
     }
     return jsonify(res)
 
-
+@app.route('/admin', methods=['GET'])
+def admin():
+    submissions = collection.find()
+    return jsonify(submissions)
 
 #Admin routes
 #Get all completed docs 
