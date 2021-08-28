@@ -38,10 +38,12 @@ def user_construct(user, floor_id):
     #address = "99 portland rd, Remuera, Auckland 1050"
     #email = "cmthomlinson@gmail.com"
     user = {
-        "firstName": user['firstName'],
-        "lastName": user['lastName'],
-        "address": user['address'],
+        "name": user['name'],
         "email": user['email'],
+        "address": user['address'],
+        "suburb": user['suburb'],
+        "city": user['city'],
+        "postcode": user['postcode'],
         "last_updated": user['last_updated']
     }
     i = 1
