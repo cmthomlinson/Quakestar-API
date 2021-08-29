@@ -84,6 +84,23 @@ def test(floor_id, doc_id):
     info = json.load(f)
     doc = collection.find_one({"_id":ObjectId(doc_id)})
      
-    print(doc['26']['x'])
+    user = {
+        "name": doc['name'],
+        "email": doc['email'],
+        "address": doc['address'],
+        "suburb": doc['suburb'],
+        "city": doc['city'],
+        "postcode": doc['postcode'],
+        "last_updated": doc['last_updated']
+    }
+    i = 1
+    state = False
+    while i < len(info[floor_id]) + 1:
+        user[str(i)] = doc[str(i)]
+        i += 1
+        if i == len(info[floor_id]) + 1:
+            state = True
+            return user
+    print(user)
 
-test("2", "61208aa3081fdc44a47c6a9d")
+test("1", "612b4345d82c0d7c94bdafa6")

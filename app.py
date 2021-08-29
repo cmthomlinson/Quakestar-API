@@ -276,19 +276,13 @@ def admin():
     submissions = collection.find()
     return jsonify(submissions)
 
-class JSONEncoder(json.JSONEncoder):
-    def default(self, o):
-        if isinstance(o, ObjectId):
-            return str(o)
-        return json.JSONEncoder.default(self, o)
 
 
-
-@app.route('/doc/<doc_id>', methods=['GET'])
+@app.route('/doc/<doc_id>/<que_id>', methods=['GET'])
 @cross_origin()
-def get_doc(doc_id):
+def get_doc(doc_id, que_id):
     doc = collection.find_one({"_id":ObjectId(doc_id)})
-    return jsonify(JSONEncoder().encode(doc))
+    return jsonify(doc[que_id])
 
 #Admin routes
 #Get all completed docs 
