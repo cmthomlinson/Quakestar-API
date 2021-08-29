@@ -276,10 +276,10 @@ def admin():
     submissions = collection.find()
     return jsonify(submissions)
 
-@app.route('/doc/<doc_id>', methods=['GET'])
-def get_doc(doc_id):
+@app.route('/doc/<doc_id>/<que_id>', methods=['GET'])
+def get_doc(doc_id, que_id):
     doc = collection.find_one({"_id":ObjectId(doc_id)})
-    return jsonify(doc)
+    return jsonify(doc[que_id])
 
 #Admin routes
 #Get all completed docs 
