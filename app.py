@@ -74,7 +74,7 @@ def register(floor_id):
         "postcode": json_data['user']['postcode'],
         "strength": 0,
         "damage": 0,
-        "last_updated": datetime.datetime.now()
+        "last_updated": str(datetime.datetime.now())
     }
     user = user_construct(form_user, floor_id)
     inserted = collection.insert_one(user)
@@ -276,10 +276,19 @@ def admin():
     submissions = collection.find()
     return jsonify(submissions)
 
-@app.route('/doc/<doc_id>/<que_id>', methods=['GET'])
-def get_doc(doc_id, que_id):
+class JSONEncoder(json.JSONEncoder):
+    def default(self, o):
+        if isinstance(o, ObjectId):
+            return str(o)
+        return json.JSONEncoder.default(self, o)
+
+
+
+@app.route('/doc/<doc_id>', methods=['GET'])
+@cross_origin()
+def get_doc(doc_id):
     doc = collection.find_one({"_id":ObjectId(doc_id)})
-    return jsonify(doc[que_id])
+    return jsonify(JSONEncoder().encode(doc))
 
 #Admin routes
 #Get all completed docs 
