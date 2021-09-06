@@ -84,23 +84,13 @@ def test(floor_id, doc_id):
     info = json.load(f)
     doc = collection.find_one({"_id":ObjectId(doc_id)})
      
-    user = {
-        "name": doc['name'],
-        "email": doc['email'],
-        "address": doc['address'],
-        "suburb": doc['suburb'],
-        "city": doc['city'],
-        "postcode": doc['postcode'],
-        "last_updated": doc['last_updated']
-    }
-    i = 1
-    state = False
-    while i < len(info[floor_id]) + 1:
-        user[str(i)] = doc[str(i)]
-        i += 1
-        if i == len(info[floor_id]) + 1:
-            state = True
-            return user
-    print(user)
+    x3 = doc['26']['x'] * doc['26']['y'] * info[floor_id]['21'][doc['21']]['strength']  
+    x4 = (doc['25']['x'] + doc['25']['y'])*2*info[floor_id]['23'][doc['23']]['strength']  
+    x5 = info[floor_id]['16'][doc['16']]['strength'] 
+    x6 = (doc['24']['x'] + doc['24']['y'])*2*info[floor_id]['13'][doc['13']]['strength']/doc['27']['x']*info[floor_id]['17'][doc['17']]['strength']
+    
+    
+    print(x3, x4, x5, x6)
 
-test("1", "612b4345d82c0d7c94bdafa6")
+
+test("2", "6135539eda861ca6dab49a8f")
