@@ -98,11 +98,11 @@ def stregth_all(floor_id, doc_id):
     f = open('coefficients.json')
     info = json.load(f)
     doc = collection.find_one({"_id":ObjectId(doc_id)})
-    
+    iregularities = 0.6
     site = (info[floor_id]['2'][doc['2']]['strength'] + info[floor_id]['3'][doc['3']]['strength'] + 1 + info[floor_id]['4'][doc['4']]['strength']) / 4
     building_data1 = info[floor_id]['5'][doc['5']]['strength']
     building_data2 = (info[floor_id]['6'][doc['6']]['strength'] + info[floor_id]['7'][doc['7']]['strength'])/2
-    appendages = min(info[floor_id]['10'][doc['10']]['strength'], info[floor_id]['11'][doc['11']]['strength'], info[floor_id]['12'][doc['12']]['strength'])
+    appendages = min(iregularities, (info[floor_id]['10'][doc['10']]['strength'], info[floor_id]['11'][doc['11']]['strength'], info[floor_id]['12'][doc['12']]['strength']))
     seismic_coefficent = info[floor_id]['1'][doc['1']]
     foundations = info[floor_id]['8'][doc['8']]['strength']
 
