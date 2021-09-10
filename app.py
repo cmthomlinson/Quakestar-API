@@ -98,7 +98,7 @@ def stregth_all(floor_id, doc_id):
     f = open('coefficients.json')
     info = json.load(f)
     doc = collection.find_one({"_id":ObjectId(doc_id)})
-    iregularities = 0.6
+    iregularities = 1
     site = (info[floor_id]['2'][doc['2']]['strength'] + info[floor_id]['3'][doc['3']]['strength'] + 1 + info[floor_id]['4'][doc['4']]['strength']) / 4
     building_data1 = info[floor_id]['5'][doc['5']]['strength']
     building_data2 = (info[floor_id]['6'][doc['6']]['strength'] + info[floor_id]['7'][doc['7']]['strength'])/2
