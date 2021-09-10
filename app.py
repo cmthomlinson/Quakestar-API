@@ -106,12 +106,12 @@ def stregth_all(floor_id, doc_id):
     seismic_coefficent = info[floor_id]['1'][doc['1']]
     foundations = info[floor_id]['8'][doc['8']]['strength']
 
-    print(site)
-    print(building_data1)
-    print(building_data2)
-    print(appendages)
-    print(seismic_coefficent)
-    print(foundations)
+    print("site: {}".format(site))
+    print("building_data1: {}".format(building_data1))
+    print("building_data2: {}".format(building_data2))
+    print("appendages: {}".format(appendages))
+    print("seismic_coefficent: {}".format(seismic_coefficent))
+    print("foundations: {}".format(foundations))
 
     return site*building_data1*building_data2*appendages*(0.4/seismic_coefficent)*foundations
 
