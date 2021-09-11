@@ -214,8 +214,8 @@ def floor_area_wall_bracing(floor_id, doc_id):
     #1   12-20 Roofcladding-16 Roofarea-19
     if floor_id == "1":
 
-        x1 = (50/3)/((doc['20']['x'] * doc['20']['y'] * info[floor_id]['17'][doc['17']]['strength'] + (doc['19']['x'] + doc['19']['y'])*2*info[floor_id]['13'][doc['13']]['strength'])/(info[floor_id]['15'][doc['15']]['strength'] * doc['21']['x']))
-        x2 = (50/3)/((doc['20']['x'] * doc['20']['y'] * info[floor_id]['17'][doc['17']]['strength'] + (doc['19']['x'] + doc['19']['y'])*2*info[floor_id]['13'][doc['13']]['strength'])/(info[floor_id]['16'][doc['16']]['strength'] * doc['21']['y']))
+        x1 = (50/3)/(((doc['20']['x'] * doc['20']['y'] * info[floor_id]['17'][doc['17']]['strength']) + (doc['20']['x'] + doc['20']['y'])*2*((info[floor_id]['18'][doc['18']]['strength'] + info[floor_id]['13'][doc['13']]['strength'])/2))/(info[floor_id]['15'][doc['15']]['strength']*doc['21']['x']))
+        x2 = (50/3)/(((doc['20']['x'] * doc['20']['y'] * info[floor_id]['17'][doc['17']]['strength']) + (doc['20']['x'] + doc['20']['y'])*2*((info[floor_id]['18'][doc['18']]['strength'] + info[floor_id]['13'][doc['13']]['strength'])/2))/(info[floor_id]['16'][doc['16']]['strength']*doc['21']['y']))
         print(min(x1, x2))
         return min(x1, x2)
 
