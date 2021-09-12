@@ -213,7 +213,6 @@ def floor_area_wall_bracing(floor_id, doc_id):
 
     #1   12-20 Roofcladding-16 Roofarea-19
     if floor_id == "1":
-
         x1 = (50/3)/(((doc['20']['x'] * doc['20']['y'] * info[floor_id]['17'][doc['17']]['strength']) + (doc['20']['x'] + doc['20']['y'])*2*((info[floor_id]['18'][doc['18']]['strength'] + info[floor_id]['13'][doc['13']]['strength'])/2))/(info[floor_id]['15'][doc['15']]['strength']*doc['21']['x']))
         x2 = (50/3)/(((doc['20']['x'] * doc['20']['y'] * info[floor_id]['17'][doc['17']]['strength']) + (doc['20']['x'] + doc['20']['y'])*2*((info[floor_id]['18'][doc['18']]['strength'] + info[floor_id]['13'][doc['13']]['strength'])/2))/(info[floor_id]['16'][doc['16']]['strength']*doc['21']['y']))
         print(min(x1, x2))
@@ -221,7 +220,6 @@ def floor_area_wall_bracing(floor_id, doc_id):
 
     #2   12-27 Roofcladding-20 Roofarea-25
     if floor_id == "2":
-        
         x1 = (50/3)/((doc['26']['x'] * doc['26']['y'] * info[floor_id]['21'][doc['21']]['strength'] + (doc['25']['x'] + doc['25']['y'])*2*((info[floor_id]['23'][doc['23']]['strength'] + info[floor_id]['15'][doc['15']]['strength'])/2))/(doc['28']['x']*info[floor_id]['19'][doc['19']]['strength']))
         x2 = (50/3)/((doc['26']['x'] * doc['26']['y'] * info[floor_id]['21'][doc['21']]['strength'] + (doc['25']['x'] + doc['25']['y'])*2*((info[floor_id]['23'][doc['23']]['strength'] + info[floor_id]['15'][doc['15']]['strength'])/2))/(doc['28']['y']*info[floor_id]['20'][doc['20']]['strength']))
         x3 = (50/3)/((doc['26']['x'] * doc['26']['y'] * info[floor_id]['21'][doc['21']]['strength'] + (doc['25']['x'] + doc['25']['y'])*2*((info[floor_id]['23'][doc['23']]['strength'] + info[floor_id]['15'][doc['15']]['strength'])/2) + (doc['25']['x'] * doc['25']['y'])*info[floor_id]['16'][doc['16']]['strength'] + (doc['24']['x'] + doc['24']['y'])*2*((info[floor_id]['22'][doc['22']]['strength'] + info[floor_id]['13'][doc['13']]['strength'])/2))/(doc['27']['x']*info[floor_id]['17'][doc['17']]['strength']))
