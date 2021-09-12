@@ -112,6 +112,7 @@ def stregth_all(floor_id, doc_id):
     print("appendages: {}".format(appendages))
     print("seismic_coefficent: {}".format(seismic_coefficent))
     print("foundations: {}".format(foundations))
+    print("irre: {}".format(irregulaties(floor_id, doc_id)))
 
     return site*building_data1*building_data2*appendages*(0.4/seismic_coefficent)*foundations
 
