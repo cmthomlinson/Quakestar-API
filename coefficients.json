@@ -209,37 +209,37 @@
         "6": {
             "Engineer": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 1.1
             },
             "Group Housing": {
-                "strength": 1.1,
+                "strength": 1,
                 "damage": 0.9
             },
             "LBP Builder": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 1
             },
             "Non-LBP builder": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.9,
+                "damage": 1.1
             },
             "Not known": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.8,
+                "damage": 1.2
             }
         },
         "7": {
             "Solid": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 0.8
             },
             "Average": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 1,
+                "damage": 1
             },
             "Below average": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.9,
+                "damage": 1.2
             }
         },
         "8": {
@@ -692,37 +692,37 @@
         "6": {
             "Engineer": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 1.1
             },
             "Group Housing": {
-                "strength": 1.1,
+                "strength": 1,
                 "damage": 0.9
             },
             "LBP Builder": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 1
             },
             "Non-LBP builder": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.9,
+                "damage": 1.1
             },
             "Not known": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.8,
+                "damage": 1.2
             }
         },
         "7": {
             "Solid": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 0.8
             },
             "Average": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 1,
+                "damage": 1
             },
             "Below average": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.9,
+                "damage": 1.2
             }
         },
         "8": {
@@ -1296,37 +1296,37 @@
         "6": {
             "Engineer": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 1.1
             },
             "Group Housing": {
-                "strength": 1.1,
+                "strength": 1,
                 "damage": 0.9
             },
             "LBP Builder": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 1
             },
             "Non-LBP builder": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.9,
+                "damage": 1.1
             },
             "Not known": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.8,
+                "damage": 1.2
             }
         },
         "7": {
             "Solid": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 0.8
             },
             "Average": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 1,
+                "damage": 1
             },
             "Below average": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.9,
+                "damage": 1.2
             }
         },
         "8": {
@@ -2016,37 +2016,37 @@
         "6": {
             "Engineer": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 1.1
             },
             "Group Housing": {
-                "strength": 1.1,
+                "strength": 1,
                 "damage": 0.9
             },
             "LBP Builder": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 1
             },
             "Non-LBP builder": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.9,
+                "damage": 1.1
             },
             "Not known": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.8,
+                "damage": 1.2
             }
         },
         "7": {
             "Solid": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 0.8
             },
             "Average": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 1,
+                "damage": 1
             },
             "Below average": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.9,
+                "damage": 1.2
             }
         },
         "8": {
@@ -2621,37 +2621,37 @@
         "6": {
             "Engineer": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 1.1
             },
             "Group Housing": {
-                "strength": 1.1,
+                "strength": 1,
                 "damage": 0.9
             },
             "LBP Builder": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 1
             },
             "Non-LBP builder": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.9,
+                "damage": 1.1
             },
             "Not known": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.8,
+                "damage": 1.2
             }
         },
         "7": {
             "Solid": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 0.8
             },
             "Average": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 1,
+                "damage": 1
             },
             "Below average": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.9,
+                "damage": 1.2
             }
         },
         "8": {
@@ -3349,37 +3349,37 @@
         "6": {
             "Engineer": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 1.1
             },
             "Group Housing": {
-                "strength": 1.1,
+                "strength": 1,
                 "damage": 0.9
             },
             "LBP Builder": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 1
             },
             "Non-LBP builder": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.9,
+                "damage": 1.1
             },
             "Not known": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.8,
+                "damage": 1.2
             }
         },
         "7": {
             "Solid": {
                 "strength": 1.1,
-                "damage": 0.9
+                "damage": 0.8
             },
             "Average": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 1,
+                "damage": 1
             },
             "Below average": {
-                "strength": 1.1,
-                "damage": 0.9
+                "strength": 0.9,
+                "damage": 1.2
             }
         },
         "8": {
