@@ -94,15 +94,13 @@ def submit(floor_id, que_id, doc_id):
 
     return jsonify('Success')
 
-def stregth_all(floor_id, doc_id):
+def stregth_all(floor_id, doc):
     f = open('coefficients.json')
     info = json.load(f)
-    doc = collection.find_one({"_id":ObjectId(doc_id)})
-    iregularities = 1
     site = (info[floor_id]['2'][doc['2']]['strength'] + info[floor_id]['3'][doc['3']]['strength'] + 1 + info[floor_id]['4'][doc['4']]['strength']) / 4
     building_data1 = info[floor_id]['5'][doc['5']]['strength']
     building_data2 = (info[floor_id]['6'][doc['6']]['strength'] + info[floor_id]['7'][doc['7']]['strength'])/2
-    appendages = min(irregulaties(floor_id, doc_id), min(info[floor_id]['10'][doc['10']]['strength'], info[floor_id]['11'][doc['11']]['strength'], info[floor_id]['12'][doc['12']]['strength']))
+    appendages = min(irregulaties(floor_id, doc), min(info[floor_id]['10'][doc['10']]['strength'], info[floor_id]['11'][doc['11']]['strength'], info[floor_id]['12'][doc['12']]['strength']))
     seismic_coefficent = info[floor_id]['1'][doc['1']]
     foundations = info[floor_id]['8'][doc['8']]['strength']
 
@@ -112,14 +110,13 @@ def stregth_all(floor_id, doc_id):
     print("appendages: {}".format(appendages))
     print("seismic_coefficent: {}".format(seismic_coefficent))
     print("foundations: {}".format(foundations))
-    print("irre: {}".format(irregulaties(floor_id, doc_id)))
+    print("irre: {}".format(irregulaties(floor_id, doc)))
 
     return site*building_data1*building_data2*appendages*(0.4/seismic_coefficent)*foundations
 
-def clad_struct_average(floor_id, doc_id): 
+def clad_struct_average(floor_id, doc): 
     f = open('coefficients.json')
     info = json.load(f)
-    doc = collection.find_one({"_id":ObjectId(doc_id)})
 
     if floor_id == "1":
         clad_av = (info[floor_id]['16'][doc['16']]['damage'] + info[floor_id]['17'][doc['17']]['damage'])/2
@@ -163,32 +160,23 @@ def clad_struct_average(floor_id, doc_id):
         print("structure_av: {}".format(structure_av))
         return clad_av*structure_av
 
-def damage_all(floor_id, doc_id):
+def damage_all(floor_id, doc):
     f = open('coefficients.json')
     info = json.load(f)
-    doc = collection.find_one({"_id":ObjectId(doc_id)})
-     
-
     site = max(info[floor_id]['2'][doc['2']]['damage'], info[floor_id]['3'][doc['3']]['damage'], 1, info[floor_id]['3'][doc['3']]['damage'])
     building = (info[floor_id]['5'][doc['5']]['damage'] * info[floor_id]['6'][doc['6']]['damage'] * info[floor_id]['7'][doc['7']]['damage'])
 
-    return site*building*clad_struct_average(floor_id, doc_id)
+    return site*building*clad_struct_average(floor_id, doc)
 
 
-def get_score(floor_id, doc_id):
-    f = open('coefficients.json')
-    info = json.load(f)
-    doc = collection.find_one({"_id":ObjectId(doc_id)})
-    score = round(stregth_all(floor_id, doc_id)*floor_area_wall_bracing(floor_id, doc_id), 0)
+def get_score(floor_id, doc):
+    score = round(stregth_all(floor_id, doc)*floor_area_wall_bracing(floor_id, doc), 0)
 
     return score
 
-def get_damage(floor_id, doc_id):
-    f = open('coefficients.json')
-    info = json.load(f)
-    doc = collection.find_one({"_id":ObjectId(doc_id)})
-    score = round(stregth_all(floor_id, doc_id)*floor_area_wall_bracing(floor_id, doc_id), 0)
-    damage = round((2000/score)*damage_all(floor_id, doc_id),0)
+def get_damage(floor_id, doc):
+    score = round(stregth_all(floor_id, doc)*floor_area_wall_bracing(floor_id, doc), 0)
+    damage = round((2000/score)*damage_all(floor_id, doc),0)
 
     return damage
 
@@ -200,16 +188,15 @@ def sd(floor_id, doc_id):
     info = json.load(f)
     doc = collection.find_one({"_id":ObjectId(doc_id)})
     res = {
-        "score": get_score(floor_id, doc_id),
-        "damage": get_damage(floor_id, doc_id)
+        "score": get_score(floor_id, doc),
+        "damage": get_damage(floor_id, doc)
     }
 
     return jsonify(res)
 
-def irregulaties(floor_id, doc_id):
+def irregulaties(floor_id, doc):
     f = open('coefficients.json')
     info = json.load(f)
-    doc = collection.find_one({"_id":ObjectId(doc_id)})
     if floor_id == "1":
 
         return 1
@@ -260,10 +247,9 @@ def irregulaties(floor_id, doc_id):
     return 'success'
 
 
-def floor_area_wall_bracing(floor_id, doc_id):
+def floor_area_wall_bracing(floor_id, doc):
     f = open('coefficients.json')
     info = json.load(f)
-    doc = collection.find_one({"_id":ObjectId(doc_id)})
 
     #1   12-20 Roofcladding-16 Roofarea-19
     if floor_id == "1":
