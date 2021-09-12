@@ -84,22 +84,15 @@ def test(floor_id, doc_id):
     info = json.load(f)
     doc = collection.find_one({"_id":ObjectId(doc_id)})
 
-    w1 = doc['26']['x'] * doc['26']['y'] * info[floor_id]['21'][doc['21']]['strength']
-    w2 = doc['26']['x'] * doc['26']['y'] * info[floor_id]['21'][doc['21']]['strength'] + (doc['25']['x'] + doc['25']['y'])*2*((info[floor_id]['23'][doc['23']]['strength'] + info[floor_id]['15'][doc['15']]['strength'])/2)
-    w3 = doc['26']['x'] * doc['26']['y'] * info[floor_id]['21'][doc['21']]['strength'] + (doc['25']['x'] + doc['25']['y'])*2*((info[floor_id]['23'][doc['23']]['strength'] + info[floor_id]['15'][doc['15']]['strength'])/2) + (doc['25']['x'] * doc['25']['y'])*info[floor_id]['16'][doc['16']]['strength']
-    w4 = doc['26']['x'] * doc['26']['y'] * info[floor_id]['21'][doc['21']]['strength'] + (doc['25']['x'] + doc['25']['y'])*2*((info[floor_id]['23'][doc['23']]['strength'] + info[floor_id]['15'][doc['15']]['strength'])/2) + (doc['25']['x'] * doc['25']['y'])*info[floor_id]['16'][doc['16']]['strength'] + (doc['24']['x'] + doc['24']['y'])*2*((info[floor_id]['22'][doc['22']]['strength'] + info[floor_id]['13'][doc['13']]['strength'])/2)
+    x1 = ((doc['27']['x']*info[floor_id]['17'][doc['17']]['strength'])/(doc['28']['x']*info[floor_id]['19'][doc['19']]['strength']))*1.2
+    x2 = ((doc['27']['y']*info[floor_id]['18'][doc['18']]['strength'])/(doc['28']['y']*info[floor_id]['20'][doc['20']]['strength']))*1.2
+    
 
-    x1 = (50/3)/((doc['26']['x'] * doc['26']['y'] * info[floor_id]['21'][doc['21']]['strength'] + (doc['25']['x'] + doc['25']['y'])*2*((info[floor_id]['23'][doc['23']]['strength'] + info[floor_id]['15'][doc['15']]['strength'])/2))/(doc['28']['x']*info[floor_id]['19'][doc['19']]['strength']))
-    x2 = (50/3)/((doc['26']['x'] * doc['26']['y'] * info[floor_id]['21'][doc['21']]['strength'] + (doc['25']['x'] + doc['25']['y'])*2*((info[floor_id]['23'][doc['23']]['strength'] + info[floor_id]['15'][doc['15']]['strength'])/2))/(doc['28']['y']*info[floor_id]['20'][doc['20']]['strength']))
-    x3 = (50/3)/((doc['26']['x'] * doc['26']['y'] * info[floor_id]['21'][doc['21']]['strength'] + (doc['25']['x'] + doc['25']['y'])*2*((info[floor_id]['23'][doc['23']]['strength'] + info[floor_id]['15'][doc['15']]['strength'])/2) + (doc['25']['x'] * doc['25']['y'])*info[floor_id]['16'][doc['16']]['strength'] + (doc['24']['x'] + doc['24']['y'])*2*((info[floor_id]['22'][doc['22']]['strength'] + info[floor_id]['13'][doc['13']]['strength'])/2))/(doc['27']['x']*info[floor_id]['17'][doc['17']]['strength']))
-    x4 = (50/3)/((doc['26']['x'] * doc['26']['y'] * info[floor_id]['21'][doc['21']]['strength'] + (doc['25']['x'] + doc['25']['y'])*2*((info[floor_id]['23'][doc['23']]['strength'] + info[floor_id]['15'][doc['15']]['strength'])/2) + (doc['25']['x'] * doc['25']['y'])*info[floor_id]['16'][doc['16']]['strength'] + (doc['24']['x'] + doc['24']['y'])*2*((info[floor_id]['22'][doc['22']]['strength'] + info[floor_id]['13'][doc['13']]['strength'])/2))/(doc['27']['y']*info[floor_id]['18'][doc['18']]['strength']))
 
-    print(x3)
-    print(x4)
     
 
    
-test("2", "613d92283f7cc1dc2568b86b")
+
 
 
 def irregulaties(floor_id, doc_id):
@@ -112,25 +105,46 @@ def irregulaties(floor_id, doc_id):
 
     #2   12-27 Roofcladding-20 Roofarea-25
     if floor_id == "2":
-        x1 = 0
-        x2 = 0
-        return 1
+        x0 = 1
+        x1 = ((doc['27']['x']*info[floor_id]['17'][doc['17']]['strength'])/(doc['28']['x']*info[floor_id]['19'][doc['19']]['strength']))*1.2
+        x2 = ((doc['27']['y']*info[floor_id]['18'][doc['18']]['strength'])/(doc['28']['y']*info[floor_id]['20'][doc['20']]['strength']))*1.2
+        return min(x0, x1, x2)
 
     #3   12-34 Roofcladding-24 Roofarea-31
     if floor_id == "3":
-
-        return 0 
+        x0 = 1
+        x1 = ((info[floor_id]['21'][doc['21']]['strength']*doc['34']['x'])/(info[floor_id]['23'][doc['23']]['strength']*doc['35']['x']))*1.2
+        x2 = ((info[floor_id]['22'][doc['22']]['strength']*doc['34']['y'])/(info[floor_id]['24'][doc['24']]['strength']*doc['35']['y']))*1.2
+        x3 = ((info[floor_id]['19'][doc['19']]['strength']*doc['33']['x'])/(info[floor_id]['21'][doc['21']]['strength']*doc['34']['x']))*1.2
+        x4 = ((info[floor_id]['20'][doc['20']]['strength']*doc['33']['y'])/(info[floor_id]['22'][doc['22']]['strength']*doc['34']['y']))*1.2
+        return min(x0, x1, x2, x3, x4)
     #1b   12-27 Roofcladding-20 Roofarea-25
     if floor_id == "1b":
+        x0 = 1
+        x1 = ((info[floor_id]['19'][doc['19']]['strength']*doc['28']['x'])/(info[floor_id]['17'][doc['17']]['strength']*doc['27']['x']))*1.2
+        x2 = ((info[floor_id]['20'][doc['20']]['strength']*doc['28']['y'])/(info[floor_id]['18'][doc['18']]['strength']*doc['27']['y']))*1.2
+        return min(x0, x1, x2)
 
-        return 0 
     #2b   12-34 Roofcladding-28 Roofarea-31
     if floor_id == "2b":
+        x0 = 1
+        x1 = ((doc['33']['x']*info[floor_id]['19'][doc['19']]['strength'])/(doc['34']['x']*info[floor_id]['21'][doc['21']]['strength']))*1.2
+        x2 = ((doc['33']['y']*info[floor_id]['20'][doc['20']]['strength'])/(doc['34']['y']*info[floor_id]['22'][doc['22']]['strength']))*1.2
+        x3 = ((info[floor_id]['23'][doc['23']]['strength']*doc['35']['x'])/(doc['33']['y']*info[floor_id]['20'][doc['20']]['strength']))*1.2
+        x4 = ((info[floor_id]['24'][doc['24']]['strength']*doc['35']['y'])/(doc['33']['y']*info[floor_id]['20'][doc['20']]['strength']))*1.2
+        return min(x0, x1, x2, x3, x4)
 
-        return 0 
     #3b   12-41 Roofcladding-28 Roofarea-37
     if floor_id == "3b":
-
-        return 0 
+        x0 = 1
+        x1 = ((info[floor_id]['23'][doc['23']]['strength']*doc['40']['x'])/(info[floor_id]['25'][doc['25']]['strength'] * doc['41']['x']))*1.2
+        x2 = ((info[floor_id]['24'][doc['24']]['strength']*doc['40']['y'])/(info[floor_id]['26'][doc['26']]['strength'] * doc['41']['y']))*1.2
+        x3 = ((info[floor_id]['21'][doc['21']]['strength']*doc['39']['x'])/(info[floor_id]['23'][doc['23']]['strength']*doc['40']['x']))*1.2
+        x4 = ((info[floor_id]['22'][doc['22']]['strength']*doc['39']['y'])/(info[floor_id]['24'][doc['24']]['strength']*doc['40']['y']))*1.2
+        x5 = ((info[floor_id]['27'][doc['27']]['strength'] * doc['42']['x'])/(info[floor_id]['21'][doc['21']]['strength']*doc['39']['x']))*1.2
+        x6 = ((info[floor_id]['28'][doc['28']]['strength'] * doc['42']['y'])/(info[floor_id]['22'][doc['22']]['strength']*doc['39']['y']))*1.2
+        return min(x0, x1, x2, x3, x4, x5, x6)
+      
 
     return 'success'
+
