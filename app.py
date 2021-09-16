@@ -75,6 +75,7 @@ def register(floor_id):
         "suburb": json_data['user']['suburb'],
         "city": json_data['user']['city'],
         "postcode": json_data['user']['postcode'],
+        "floor_id": json_data['user']['floor_id'],
         "last_updated": str(datetime.datetime.now())
     }
     user = user_construct(form_user, floor_id)
