@@ -72,6 +72,7 @@ def register(floor_id):
         "suburb": json_data['user']['suburb'],
         "city": json_data['user']['city'],
         "postcode": json_data['user']['postcode'],
+        "floor_id": json_data['user']['floor_id'],
         "strength": 0,
         "damage": 0,
         "last_updated": str(datetime.datetime.now())
