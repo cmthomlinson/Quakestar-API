@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 import json
 import pymongo
-from bson import ObjectId
+from bson import ObjectId, json_util
 import datetime
 from dotenv import load_dotenv, find_dotenv
 import os
@@ -332,13 +332,14 @@ def admin():
     submissions = collection.find()
     return jsonify(submissions)
 
+def parse_json(data):
+    return json.loads(json_util.dumps(data))
 
-
-@app.route('/doc/<doc_id>/<que_id>', methods=['GET'])
+@app.route('/doc/<doc_id>/', methods=['GET'])
 @cross_origin()
-def get_doc(doc_id, que_id):
+def get_doc(doc_id):
     doc = collection.find_one({"_id":ObjectId(doc_id)})
-    return jsonify(doc[que_id])
+    return parse_json(doc)
 
 #Admin routes
 #Get all completed docs 
