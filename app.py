@@ -44,7 +44,10 @@ def user_construct(user, floor_id):
         "suburb": user['suburb'],
         "city": user['city'],
         "postcode": user['postcode'],
-        "last_updated": user['last_updated']
+        "last_updated": user['last_updated'],
+        "floor_id": user['floor_id'],
+        "strength": 0,
+        "damage": 0,
     }
     i = 1
     state = False
@@ -72,9 +75,6 @@ def register(floor_id):
         "suburb": json_data['user']['suburb'],
         "city": json_data['user']['city'],
         "postcode": json_data['user']['postcode'],
-        "floor_id": json_data['user']['floor_id'],
-        "strength": 0,
-        "damage": 0,
         "last_updated": str(datetime.datetime.now())
     }
     user = user_construct(form_user, floor_id)
