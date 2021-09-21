@@ -148,3 +148,35 @@ def irregulaties(floor_id, doc_id):
 
     return 'success'
 
+def user_construct(user, floor_id):
+    f = open('init.json')
+    info = json.load(f)
+    #firstName = "David"
+    #lastName = "Thomlinson"
+    #address = "99 portland rd, Remuera, Auckland 1050"
+    #email = "cmthomlinson@gmail.com"
+    user = {
+        "name": user['name'],
+        "email": user['email'],
+        "address": user['address'],
+        "suburb": user['suburb'],
+        "city": user['city'],
+        "postcode": user['postcode'],
+        "last_updated": user['last_updated'],
+        "floor_id": user['floor_id'],
+        "strength": 0,
+        "damage": 0,
+        "responses": {}
+    }
+    i = 1
+    state = False
+    while i < len(info[floor_id]) + 1:
+        user['responses'][str(i)] = info[floor_id][str(i)]['response']
+        i += 1
+        if i == len(info[floor_id]) + 1:
+            state = True
+            return user
+
+
+    
+    print(user)
