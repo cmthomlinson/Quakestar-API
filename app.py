@@ -179,7 +179,7 @@ def get_score(floor_id, doc):
     return score
 
 def get_damage(floor_id, doc):
-    score = round(stregth_all(floor_id, doc)*floor_area_wall_bracing(floor_id, doc), 0)
+    score = stregth_all(floor_id, doc)*floor_area_wall_bracing(floor_id, doc)
     damage = round((2000/score)*damage_all(floor_id, doc),0)
 
     return damage
