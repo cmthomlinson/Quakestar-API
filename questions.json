@@ -358,10 +358,10 @@
             "row_input": "89",
             "col_input": "5",
             "options": [
-                "None",
-                "Brick",
-                "Block",
-                "Lightweight"
+                "None ",
+                "Brick ",
+                "Block ",
+                "Lightweight "
             ]
         },
         "12": {
@@ -468,12 +468,12 @@
             "row_input": "55",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
@@ -983,10 +983,10 @@
             "row_input": "89",
             "col_input": "5",
             "options": [
-                "None",
-                "Brick",
-                "Block",
-                "Lightweight"
+                "None ",
+                "Brick ",
+                "Block ",
+                "Lightweight "
             ]
         },
         "12": {
@@ -1156,7 +1156,7 @@
     
             },
             "route": "optionform",
-            "subject": "First floor Y-direction walls",
+            "subject": "First floor X-direction walls",
             "current_route": "option_question",
             "next_route": "option_question",
             "row_input": "54",
@@ -1186,12 +1186,12 @@
             "row_input": "54",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
@@ -1785,10 +1785,10 @@
             "row_input": "89",
             "col_input": "5",
             "options": [
-                "None",
-                "Brick",
-                "Block",
-                "Lightweight"
+                "None ",
+                "Brick ",
+                "Block ",
+                "Lightweight "
             ]
         },
         "12": {
@@ -1983,12 +1983,12 @@
             "row_input": "55",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
@@ -2031,12 +2031,12 @@
             "row_input": "54",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
@@ -2079,12 +2079,12 @@
             "row_input": "53",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
@@ -2760,10 +2760,10 @@
             "row_input": "89",
             "col_input": "5",
             "options": [
-                "None",
-                "Brick",
-                "Block",
-                "Lightweight"
+                "None ",
+                "Brick ",
+                "Block ",
+                "Lightweight "
             ]
         },
         "12": {
@@ -2915,12 +2915,12 @@
             "row_input": "55",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
@@ -2963,12 +2963,12 @@
             "row_input": "56",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
@@ -3562,10 +3562,10 @@
             "row_input": "89",
             "col_input": "5",
             "options": [
-                "None",
-                "Brick",
-                "Block",
-                "Lightweight"
+                "None ",
+                "Brick ",
+                "Block ",
+                "Lightweight "
             ]
         },
         "12": {
@@ -3760,12 +3760,12 @@
             "row_input": "55",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
@@ -3808,12 +3808,12 @@
             "row_input": "54",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
@@ -3856,12 +3856,12 @@
             "row_input": "56",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
@@ -4538,10 +4538,10 @@
             "row_input": "89",
             "col_input": "5",
             "options": [
-                "None",
-                "Brick",
-                "Block",
-                "Lightweight"
+                "None ",
+                "Brick ",
+                "Block ",
+                "Lightweight "
             ]
         },
         "12": {
@@ -4785,12 +4785,12 @@
             "row_input": "55",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
@@ -4833,12 +4833,12 @@
             "row_input": "54",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
@@ -4881,12 +4881,12 @@
             "row_input": "53",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
@@ -4929,12 +4929,12 @@
             "row_input": "56",
             "col_input": "6",
             "options": [
-                "Structural steel",
-                "Ply",
-                "Gib",
-                "Concrete Block",
-                "Concrete",
-                "Brick (URM)"
+                "Structural steel ",
+                "Ply ",
+                "Gib ",
+                "Concrete Block ",
+                "Concrete ",
+                "Brick (URM) "
 
             ]
         },
