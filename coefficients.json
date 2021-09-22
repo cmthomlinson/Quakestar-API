@@ -305,19 +305,19 @@
             }
         },
         "11": {
-            "None": {
+            "None ": {
                 "strength": 1.1,
                 "damage": 1
             },
-            "Brick": {
+            "Brick ": {
                 "strength": 0.8,
                 "damage": 1.1
             },
-            "Block": {
+            "Block ": {
                 "strength": 0.9,
                 "damage": 1
             },                
-            "Lightweight": {
+            "Lightweight ": {
                 "strength": 1,
                 "damage": 1
             }
@@ -412,27 +412,27 @@
             }
         },
         "16": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1 
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 1.5
             }
@@ -788,19 +788,19 @@
             }
         },
         "11": {
-            "None": {
+            "None ": {
                 "strength": 1.1,
                 "damage": 1
             },
-            "Brick": {
+            "Brick ": {
                 "strength": 0.8,
                 "damage": 1.1
             },
-            "Block": {
+            "Block ": {
                 "strength": 0.9,
                 "damage": 1
             },                
-            "Lightweight": {
+            "Lightweight ": {
                 "strength": 1,
                 "damage": 1
             }
@@ -939,27 +939,27 @@
             }
         },
         "18": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 1.5
             }
@@ -991,27 +991,27 @@
             }
         },
         "20": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 2
             }
@@ -1392,19 +1392,19 @@
             }
         },
         "11": {
-            "None": {
+            "None ": {
                 "strength": 1.1,
                 "damage": 1
             },
-            "Brick": {
+            "Brick ": {
                 "strength": 0.8,
                 "damage": 1.1
             },
-            "Block": {
+            "Block ": {
                 "strength": 0.9,
                 "damage": 1
             },                
-            "Lightweight": {
+            "Lightweight ": {
                 "strength": 1,
                 "damage": 1
             }
@@ -1586,27 +1586,27 @@
             }
         },
         "20": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 1.5
             }  
@@ -1638,27 +1638,27 @@
             }  
         },
         "22": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 2
             }   
@@ -1690,27 +1690,27 @@
             }   
         },
         "24": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1.1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 2
             }     
@@ -2111,19 +2111,19 @@
             }
         },
         "11": {
-            "None": {
+            "None ": {
                 "strength": 1.1,
                 "damage": 1
             },
-            "Brick": {
+            "Brick ": {
                 "strength": 0.8,
                 "damage": 1.1
             },
-            "Block": {
+            "Block ": {
                 "strength": 0.9,
                 "damage": 1
             },                
-            "Lightweight": {
+            "Lightweight ": {
                 "strength": 1,
                 "damage": 1
             }
@@ -2265,27 +2265,27 @@
             }
         },
         "18": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 1.5
             }
@@ -2317,27 +2317,27 @@
             }
         },
         "20": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1.1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.2
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 1.2
             }
@@ -2716,19 +2716,19 @@
             }
         },
         "11": {
-            "None": {
+            "None ": {
                 "strength": 1.1,
                 "damage": 1
             },
-            "Brick": {
+            "Brick ": {
                 "strength": 0.8,
                 "damage": 1.1
             },
-            "Block": {
+            "Block ": {
                 "strength": 0.9,
                 "damage": 1
             },                
-            "Lightweight": {
+            "Lightweight ": {
                 "strength": 1,
                 "damage": 1
             }
@@ -2919,27 +2919,27 @@
             }
         },
         "20": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 1.5
             }
@@ -2971,27 +2971,27 @@
             }
         },
         "22": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 2
             }
@@ -3023,27 +3023,27 @@
             }
         },
         "24": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1.1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.2
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 3,
                 "damage": 1.2
             }
@@ -3444,19 +3444,19 @@
             }
         },
         "11": {
-            "None": {
+            "None ": {
                 "strength": 1.1,
                 "damage": 1
             },
-            "Brick": {
+            "Brick ": {
                 "strength": 0.8,
                 "damage": 1.1
             },
-            "Block": {
+            "Block ": {
                 "strength": 0.9,
                 "damage": 1
             },                
-            "Lightweight": {
+            "Lightweight ": {
                 "strength": 1,
                 "damage": 1
             }
@@ -3702,27 +3702,27 @@
             }
         },
         "22": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 1.5
             }
@@ -3754,27 +3754,27 @@
             }
         },
         "24": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 2
             }
@@ -3806,27 +3806,27 @@
             } 
         },
         "26": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1.1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 2
             } 
@@ -3858,27 +3858,27 @@
             } 
         },
         "28": {
-            "Structural steel": {
+            "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1.1
             },
-            "Ply": {
+            "Ply ": {
                 "strength": 2,
                 "damage": 1
             },
-            "Gib": {
+            "Gib ": {
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete Block": {
+            "Concrete Block ": {
                 "strength": 3,
                 "damage": 1.2
             },
-            "Concrete": {
+            "Concrete ": {
                 "strength": 3,
                 "damage": 1.1
             },
-            "Brick (URM)": {
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 1.2
             } 
