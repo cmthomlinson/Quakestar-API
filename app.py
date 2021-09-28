@@ -104,7 +104,7 @@ def stregth_all(floor_id, doc):
     building_data2 = (info[floor_id]['6'][doc['6']]['strength'] + info[floor_id]['7'][doc['7']]['strength'])/2
     appendages = min(irregulaties(floor_id, doc), min(info[floor_id]['10'][doc['10']]['strength'], info[floor_id]['11'][doc['11']]['strength'], info[floor_id]['12'][doc['12']]['strength']))
     seismic_coefficent = info[floor_id]['1'][doc['1']]
-    foundations = info[floor_id]['8'][doc['8']]['strength']
+    foundations = foundations_av(floor_id, doc)
 
     print("site: {}".format(site))
     print("building_data1: {}".format(building_data1))
@@ -115,6 +115,18 @@ def stregth_all(floor_id, doc):
     print("irre: {}".format(irregulaties(floor_id, doc)))
 
     return site*building_data1*building_data2*appendages*(0.4/seismic_coefficent)*foundations
+
+def foundations_av(floor_id, doc):
+    f = open('coefficients.json')
+    info = json.load(f)
+    true = []
+    sum_ = 0
+    for i in doc['8']:
+        if doc['8'][i] == "true":
+            sum_ += info[floor_id]['8'][i]['strength']
+            true.append(i)
+    average = sum_/(len(true))
+    return average
 
 def clad_struct_average(floor_id, doc): 
     f = open('coefficients.json')

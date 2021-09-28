@@ -22,7 +22,14 @@
             "response": "Solid"
         },
         "8": {
-            "response": "Timber piles"
+            "response": {
+                "Brick (URM)": "false",
+                "Slab": "false",
+                "Timber piles": "true",
+                "Concrete piles": "false",
+                "Engineered poles": "false",
+                "Concrete walls": "false"
+            }
         },
         "9": {
             "response": "Timber truss/beams"
@@ -98,7 +105,14 @@
             "response": "Solid"
         },
         "8": {
-            "response": "Timber piles"
+            "response": {
+                "Brick (URM)": "false",
+                "Slab": "false",
+                "Timber piles": "true",
+                "Concrete piles": "false",
+                "Engineered poles": "false",
+                "Concrete walls": "false"
+            }
         },
         "9": {
             "response": "Timber truss/beams"
@@ -214,7 +228,14 @@
             "response": "Solid"
         },
         "8": {
-            "response": "Timber piles"
+            "response": {
+                "Brick (URM)": "false",
+                "Slab": "false",
+                "Timber piles": "true",
+                "Concrete piles": "false",
+                "Engineered poles": "false",
+                "Concrete walls": "false"
+            }
         },
         "9": {
             "response": "Timber truss/beams"
@@ -365,7 +386,14 @@
             "response": "Solid"
         },
         "8": {
-            "response": "Timber piles"
+            "response": {
+                "Brick (URM)": "false",
+                "Slab": "false",
+                "Timber piles": "true",
+                "Concrete piles": "false",
+                "Engineered poles": "false",
+                "Concrete walls": "false"
+            }
         },
         "9": {
             "response": "Timber truss/beams"
@@ -478,7 +506,14 @@
             "response": "Solid"
         },
         "8": {
-            "response": "Timber piles"
+            "response": {
+                "Brick (URM)": "false",
+                "Slab": "false",
+                "Timber piles": "true",
+                "Concrete piles": "false",
+                "Engineered poles": "false",
+                "Concrete walls": "false"
+            }
         },
         "9": {
             "response": "Timber truss/beams"
@@ -629,7 +664,14 @@
             "response": "Solid"
         },
         "8": {
-            "response": "Timber piles"
+            "response": {
+                "Brick (URM)": "false",
+                "Slab": "false",
+                "Timber piles": "true",
+                "Concrete piles": "false",
+                "Engineered poles": "false",
+                "Concrete walls": "false"
+            }
         },
         "9": {
             "response": "Timber truss/beams"

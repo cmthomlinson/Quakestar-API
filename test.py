@@ -182,4 +182,30 @@ def test(floor_id, doc_id):
 
     return min(x1, x2, x3, x4, x5, x6, x7, x8)
 
-test("3b", "614ada6ac2f42f05daf154d3")
+question_8 = {
+    "response": {
+        "Brick (URM)": "true",
+        "Slab": "true",
+        "Timber piles": "true",
+        "Concrete piles": "true",
+        "Engineered poles": "true",
+        "Concrete walls": "true"
+    }
+}
+
+def foundations_av(floor_id, doc):
+    f = open('coefficients.json')
+    info = json.load(f)
+    true = []
+    sum_ = 0
+    for i in question_8['response']:
+        if question_8['response'][i] == "true":
+            sum_ += info[floor_id]['8'][i]['strength']
+            true.append(i)
+    average = sum_/(len(true))
+    return average
+
+
+            
+
+foundations_av("1")
