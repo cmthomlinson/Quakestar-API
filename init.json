@@ -56,10 +56,23 @@
             "response": "Gib "
         },
         "17": {
-            "response": "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)"
+            "response": {
+                "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)": true,
+                "Heavy tiles (Examples: Clay, concrete or similar weight)": false,
+                "Light tiles (Examples: Metal tiles, wooden shingles)": false,
+                "Membrane roof (Example: Torch-on membrane on plywood sheets)": false,
+                "Concrete slab with waterproof coating or membrane.": false
+                
+            }
         },
         "18": {
-            "response": "Timber (Example: weatherboards) "
+            "response": {
+                "Concrete ": false,
+                "Timber (Example: weatherboards) ": true,
+                "Concrete block ": false,
+                "Brick or brick veneer ": false,
+                "Stucco / Monolithic or similar ": false
+            }
         },
         "19": {
             "response": {
@@ -159,16 +172,32 @@
 
         },
         "21": {
-            "response": "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)"
-
+            "response": {
+                "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)": true,
+                "Heavy tiles (Examples: Clay, concrete or similar weight)": false,
+                "Light tiles (Examples: Metal tiles, wooden shingles)": false,
+                "Membrane roof (Example: Torch-on membrane on plywood sheets)": false,
+                "Concrete slab with waterproof coating or membrane.": false
+                
+            }
         },
         "22": {
-            "response": "Timber (Example: weatherboards) "
-
+            "response": {
+                "Concrete ": false,
+                "Timber (Example: weatherboards) ": true,
+                "Concrete block ": false,
+                "Brick or brick veneer ": false,
+                "Stucco / Monolithic or similar ": false
+            }
         },
         "23": {
-            "response": "Timber (Example: weatherboards)"
-
+            "response": {
+                "Concrete": false,
+                "Timber (Example: weatherboards)": true,
+                "Concrete block": false,
+                "Brick or brick veneer": false,
+                "Stucco / Monolithic or similar": false
+            }
         },
         "24": {
             "response": {
@@ -298,20 +327,41 @@
 
         },
         "25": {
-            "response": "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)"
-
+            "response": {
+                "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)": true,
+                "Heavy tiles (Examples: Clay, concrete or similar weight)": false,
+                "Light tiles (Examples: Metal tiles, wooden shingles)": false,
+                "Membrane roof (Example: Torch-on membrane on plywood sheets)": false,
+                "Concrete slab with waterproof coating or membrane.": false
+                
+            }
         },
         "26": {
-            "response": "Timber (Example: weatherboards) "
-
+            "response": {
+                "Concrete ": false,
+                "Timber (Example: weatherboards) ": true,
+                "Concrete block ": false,
+                "Brick or brick veneer ": false,
+                "Stucco / Monolithic or similar ": false
+            }
         },
         "27": {
-            "response": "Timber (Example: weatherboards)"
-
+            "response": {
+                "Concrete": false,
+                "Timber (Example: weatherboards)": true,
+                "Concrete block": false,
+                "Brick or brick veneer": false,
+                "Stucco / Monolithic or similar": false
+            }
         },
         "28": {
-            "response": "Timber (Example: weatherboards) "
-
+            "response": {
+                "Concrete ": false,
+                "Timber (Example: weatherboards) ": true,
+                "Concrete block ": false,
+                "Brick or brick veneer ": false,
+                "Stucco / Monolithic or similar ": false
+            }
         },
         "29": {
             "response": {
@@ -440,16 +490,32 @@
 
         },
         "21": {
-            "response": "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)"
-
+            "response": {
+                "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)": true,
+                "Heavy tiles (Examples: Clay, concrete or similar weight)": false,
+                "Light tiles (Examples: Metal tiles, wooden shingles)": false,
+                "Membrane roof (Example: Torch-on membrane on plywood sheets)": false,
+                "Concrete slab with waterproof coating or membrane.": false
+                
+            }
         },
         "22": {
-            "response": "Timber (Example: weatherboards) "
-
+            "response": {
+                "Concrete ": false,
+                "Timber (Example: weatherboards) ": true,
+                "Concrete block ": false,
+                "Brick or brick veneer ": false,
+                "Stucco / Monolithic or similar ": false
+            }
         },
         "23": {
-            "response": "Timber (Example: weatherboards)"
-
+            "response": {
+                "Concrete": false,
+                "Timber (Example: weatherboards)": true,
+                "Concrete block": false,
+                "Brick or brick veneer": false,
+                "Stucco / Monolithic or similar": false
+            }
         },
         "24": {
             "response": {
@@ -576,20 +642,41 @@
 
         },
         "25": {
-            "response": "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)"
-
+            "response": {
+                "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)": true,
+                "Heavy tiles (Examples: Clay, concrete or similar weight)": false,
+                "Light tiles (Examples: Metal tiles, wooden shingles)": false,
+                "Membrane roof (Example: Torch-on membrane on plywood sheets)": false,
+                "Concrete slab with waterproof coating or membrane.": false
+                
+            }
         },
         "26": {
-            "response": "Timber (Example: weatherboards) "
-
+            "response": {
+                "Concrete ": false,
+                "Timber (Example: weatherboards) ": true,
+                "Concrete block ": false,
+                "Brick or brick veneer ": false,
+                "Stucco / Monolithic or similar ": false
+            }
         },
         "27": {
-            "response": "Timber (Example: weatherboards)"
-
+            "response": {
+                "Concrete": false,
+                "Timber (Example: weatherboards)": true,
+                "Concrete block": false,
+                "Brick or brick veneer": false,
+                "Stucco / Monolithic or similar": false
+            }
         },
         "28": {
-            "response": "Timber (Example: weatherboards) "
-
+            "response": {
+                "Concrete ": false,
+                "Timber (Example: weatherboards) ": true,
+                "Concrete block ": false,
+                "Brick or brick veneer ": false,
+                "Stucco / Monolithic or similar ": false
+            }
         },
         "29": {
             "response": {
@@ -750,24 +837,50 @@
 
         },
         "29": {
-            "response": "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)"
-
+            "response": {
+                "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)": true,
+                "Heavy tiles (Examples: Clay, concrete or similar weight)": false,
+                "Light tiles (Examples: Metal tiles, wooden shingles)": false,
+                "Membrane roof (Example: Torch-on membrane on plywood sheets)": false,
+                "Concrete slab with waterproof coating or membrane.": false
+                
+            }
         },
         "30": {
-            "response": "Timber (Example: weatherboards) "
-
+            "response": {
+                "Concrete ": false,
+                "Timber (Example: weatherboards) ": true,
+                "Concrete block ": false,
+                "Brick or brick veneer ": false,
+                "Stucco / Monolithic or similar ": false
+            }
         },
         "31": {
-            "response": "Timber (Example: weatherboards)"
-
+            "response": {
+                "Concrete": false,
+                "Timber (Example: weatherboards)": true,
+                "Concrete block": false,
+                "Brick or brick veneer": false,
+                "Stucco / Monolithic or similar": false
+            }
         },
         "32": {
-            "response": "Timber (Example: weatherboards) "
-
+            "response": {
+                "Concrete ": false,
+                "Timber (Example: weatherboards) ": true,
+                "Concrete block ": false,
+                "Brick or brick veneer ": false,
+                "Stucco / Monolithic or similar ": false
+            }
         },
         "33": {
-            "response": "Timber (Example: weatherboards)"
-
+            "response": {
+                "Concrete": false,
+                "Timber (Example: weatherboards)": true,
+                "Concrete block": false,
+                "Brick or brick veneer": false,
+                "Stucco / Monolithic or similar": false
+            }
         },
         "34": {
             "response": {

@@ -104,7 +104,7 @@ def stregth_all(floor_id, doc):
     building_data2 = (info[floor_id]['6'][doc['6']]['strength'] + info[floor_id]['7'][doc['7']]['strength'])/2
     appendages = min(irregulaties(floor_id, doc), min(info[floor_id]['10'][doc['10']]['strength'], info[floor_id]['11'][doc['11']]['strength'], info[floor_id]['12'][doc['12']]['strength']))
     seismic_coefficent = info[floor_id]['1'][doc['1']]
-    foundations = foundations_av(floor_id, doc)
+    foundations = checkox_av(floor_id, doc, '8', 'strength')
 
     print("site: {}".format(site))
     print("building_data1: {}".format(building_data1))
@@ -116,14 +116,14 @@ def stregth_all(floor_id, doc):
 
     return site*building_data1*building_data2*appendages*(0.4/seismic_coefficent)*foundations
 
-def foundations_av(floor_id, doc):
+def checkox_av(floor_id, doc, que_id, type):
     f = open('coefficients.json')
     info = json.load(f)
     true_ = []
     sum_ = 0
-    for i in doc['8']:
-        if doc['8'][i] == True:
-            sum_ += info[floor_id]['8'][i]['strength']
+    for i in doc[que_id]:
+        if doc[que_id][i] == True:
+            sum_ += info[floor_id][que_id][i][type]
             true_.append(i)
 
     if sum_ == 0:
@@ -136,43 +136,43 @@ def clad_struct_average(floor_id, doc):
     info = json.load(f)
 
     if floor_id == "1":
-        clad_av = (info[floor_id]['17'][doc['17']]['damage'] + info[floor_id]['18'][doc['18']]['damage'] + 3)/5
-        structure_av = (foundations_av(floor_id, doc) + info[floor_id]['9'][doc['9']]['damage'] + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + info[floor_id]['16'][doc['16']]['damage'] + 12)/8
+        clad_av = (checkox_av(floor_id, doc, '17', 'damage') + checkox_av(floor_id, doc, '18', 'damage') + 3)/5
+        structure_av = (checkox_av(floor_id, doc, '8', 'strength') + info[floor_id]['9'][doc['9']]['damage'] + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + info[floor_id]['16'][doc['16']]['damage'] + 12)/8
         print("clad_av: {}".format(clad_av))
         print("structure_av: {}".format(structure_av))
         return clad_av*structure_av
 
     if floor_id == "2":
-        clad_av = (info[floor_id]['21'][doc['21']]['damage'] + info[floor_id]['22'][doc['22']]['damage'] + info[floor_id]['23'][doc['23']]['damage'] + 2)/5
-        structure_av = (foundations_av(floor_id, doc) + info[floor_id]['9'][doc['9']]['damage'] + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + info[floor_id]['17'][doc['17']]['damage'] + info[floor_id]['18'][doc['18']]['damage'] + info[floor_id]['19'][doc['19']]['damage'] + info[floor_id]['20'][doc['20']]['damage'] + 9)/18
+        clad_av = (checkox_av(floor_id, doc, '21', 'damage') + checkox_av(floor_id, doc, '22', 'damage') + checkox_av(floor_id, doc, '23', 'damage') + 2)/5
+        structure_av = (checkox_av(floor_id, doc, '8', 'strength') + info[floor_id]['9'][doc['9']]['damage'] + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + info[floor_id]['17'][doc['17']]['damage'] + info[floor_id]['18'][doc['18']]['damage'] + info[floor_id]['19'][doc['19']]['damage'] + info[floor_id]['20'][doc['20']]['damage'] + 9)/18
         print("clad_av: {}".format(clad_av))
         print("structure_av: {}".format(structure_av))
         return clad_av*structure_av
 
     if floor_id == "3":
-        clad_av = (info[floor_id]['25'][doc['25']]['damage'] + info[floor_id]['26'][doc['26']]['damage'] + info[floor_id]['27'][doc['27']]['damage'] + info[floor_id]['28'][doc['28']]['damage'] + 1)/5
-        structure_av = (foundations_av(floor_id, doc) + info[floor_id]['9'][doc['9']]['damage'] + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + info[floor_id]['16'][doc['16']]['damage'] + info[floor_id]['17'][doc['17']]['damage'] + info[floor_id]['18'][doc['18']]['damage'] + info[floor_id]['19'][doc['19']]['damage'] + info[floor_id]['20'][doc['20']]['damage'] + info[floor_id]['21'][doc['21']]['damage'] + info[floor_id]['22'][doc['22']]['damage'] + info[floor_id]['23'][doc['23']]['damage'] + info[floor_id]['24'][doc['24']]['damage'] + 4)/18
+        clad_av = (checkox_av(floor_id, doc, '25', 'damage') + checkox_av(floor_id, doc, '26', 'damage') + checkox_av(floor_id, doc, '27', 'damage') + checkox_av(floor_id, doc, '28', 'damage') + 1)/5
+        structure_av = (checkox_av(floor_id, doc, '8', 'strength') + info[floor_id]['9'][doc['9']]['damage'] + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + info[floor_id]['16'][doc['16']]['damage'] + info[floor_id]['17'][doc['17']]['damage'] + info[floor_id]['18'][doc['18']]['damage'] + info[floor_id]['19'][doc['19']]['damage'] + info[floor_id]['20'][doc['20']]['damage'] + info[floor_id]['21'][doc['21']]['damage'] + info[floor_id]['22'][doc['22']]['damage'] + info[floor_id]['23'][doc['23']]['damage'] + info[floor_id]['24'][doc['24']]['damage'] + 4)/18
         print("clad_av: {}".format(clad_av))
         print("structure_av: {}".format(structure_av))
         return clad_av*structure_av
 
     if floor_id == "1b":
-        clad_av = (info[floor_id]['21'][doc['21']]['damage'] + info[floor_id]['22'][doc['22']]['damage'] + info[floor_id]['23'][doc['23']]['damage'] + 2)/5
-        structure_av = (foundations_av(floor_id, doc) + info[floor_id]['9'][doc['9']]['damage'] + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + info[floor_id]['16'][doc['16']]['damage'] + info[floor_id]['17'][doc['17']]['damage'] + info[floor_id]['18'][doc['18']]['damage'] + info[floor_id]['19'][doc['19']]['damage'] + info[floor_id]['20'][doc['20']]['damage'] + 8)/18
+        clad_av = (checkox_av(floor_id, doc, '21', 'damage') + checkox_av(floor_id, doc, '22', 'damage') + checkox_av(floor_id, doc, '23', 'damage') + 2)/5
+        structure_av = (checkox_av(floor_id, doc, '8', 'strength') + info[floor_id]['9'][doc['9']]['damage'] + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + info[floor_id]['16'][doc['16']]['damage'] + info[floor_id]['17'][doc['17']]['damage'] + info[floor_id]['18'][doc['18']]['damage'] + info[floor_id]['19'][doc['19']]['damage'] + info[floor_id]['20'][doc['20']]['damage'] + 8)/18
         print("clad_av: {}".format(clad_av))
         print("structure_av: {}".format(structure_av))
         return clad_av*structure_av
 
     if floor_id == "2b":
-        clad_av = (info[floor_id]['25'][doc['25']]['damage'] + info[floor_id]['26'][doc['26']]['damage'] + info[floor_id]['27'][doc['27']]['damage'] + info[floor_id]['28'][doc['28']]['damage'] + 1)/5
-        structure_av = (foundations_av(floor_id, doc) + info[floor_id]['9'][doc['9']]['damage'] + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + info[floor_id]['16'][doc['16']]['damage'] + info[floor_id]['17'][doc['17']]['damage'] + info[floor_id]['18'][doc['18']]['damage'] + info[floor_id]['19'][doc['19']]['damage'] + info[floor_id]['20'][doc['20']]['damage'] + info[floor_id]['21'][doc['21']]['damage'] + info[floor_id]['22'][doc['22']]['damage'] + info[floor_id]['23'][doc['23']]['damage'] + info[floor_id]['24'][doc['24']]['damage'] + 4)/18
+        clad_av = (checkox_av(floor_id, doc, '25', 'damage') + checkox_av(floor_id, doc, '26', 'damage') + checkox_av(floor_id, doc, '27', 'damage') + checkox_av(floor_id, doc, '28', 'damage') + 1)/5
+        structure_av = (checkox_av(floor_id, doc, '8', 'strength') + info[floor_id]['9'][doc['9']]['damage'] + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + info[floor_id]['16'][doc['16']]['damage'] + info[floor_id]['17'][doc['17']]['damage'] + info[floor_id]['18'][doc['18']]['damage'] + info[floor_id]['19'][doc['19']]['damage'] + info[floor_id]['20'][doc['20']]['damage'] + info[floor_id]['21'][doc['21']]['damage'] + info[floor_id]['22'][doc['22']]['damage'] + info[floor_id]['23'][doc['23']]['damage'] + info[floor_id]['24'][doc['24']]['damage'] + 4)/18
         print("clad_av: {}".format(clad_av))
         print("structure_av: {}".format(structure_av))
         return clad_av*structure_av
 
     if floor_id == "3b":
-        clad_av = (info[floor_id]['29'][doc['29']]['damage'] + info[floor_id]['30'][doc['30']]['damage'] + info[floor_id]['31'][doc['31']]['damage'] + info[floor_id]['32'][doc['32']]['damage'] + info[floor_id]['33'][doc['33']]['damage'])/5
-        structure_av = (foundations_av(floor_id, doc) + info[floor_id]['9'][doc['9']]['damage'] + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + info[floor_id]['16'][doc['16']]['damage'] + info[floor_id]['17'][doc['17']]['damage'] + info[floor_id]['18'][doc['18']]['damage'] + info[floor_id]['19'][doc['19']]['damage'] + info[floor_id]['20'][doc['20']]['damage'] + info[floor_id]['21'][doc['21']]['damage'] + info[floor_id]['22'][doc['22']]['damage'] + info[floor_id]['23'][doc['23']]['damage'] + info[floor_id]['24'][doc['24']]['damage'] + info[floor_id]['25'][doc['25']]['damage'] + info[floor_id]['26'][doc['26']]['damage'] + info[floor_id]['27'][doc['27']]['damage'] + info[floor_id]['28'][doc['28']]['damage'])/18
+        clad_av = (checkox_av(floor_id, doc, '29', 'damage') + checkox_av(floor_id, doc, '30', 'damage') + checkox_av(floor_id, doc, '31', 'damage') + checkox_av(floor_id, doc, '32', 'damage') + checkox_av(floor_id, doc, '33', 'damage'))/5
+        structure_av = (checkox_av(floor_id, doc, '8', 'strength') + info[floor_id]['9'][doc['9']]['damage'] + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + info[floor_id]['16'][doc['16']]['damage'] + info[floor_id]['17'][doc['17']]['damage'] + info[floor_id]['18'][doc['18']]['damage'] + info[floor_id]['19'][doc['19']]['damage'] + info[floor_id]['20'][doc['20']]['damage'] + info[floor_id]['21'][doc['21']]['damage'] + info[floor_id]['22'][doc['22']]['damage'] + info[floor_id]['23'][doc['23']]['damage'] + info[floor_id]['24'][doc['24']]['damage'] + info[floor_id]['25'][doc['25']]['damage'] + info[floor_id]['26'][doc['26']]['damage'] + info[floor_id]['27'][doc['27']]['damage'] + info[floor_id]['28'][doc['28']]['damage'])/18
         print("clad_av: {}".format(clad_av))
         print("structure_av: {}".format(structure_av))
         return clad_av*structure_av
@@ -272,8 +272,8 @@ def floor_area_wall_bracing(floor_id, doc):
 
     #1   12-20 Roofcladding-16 Roofarea-19
     if floor_id == "1":
-        x1 = (50/3)/(((doc['20']['x'] * doc['20']['y'] * info[floor_id]['17'][doc['17']]['strength']) + (doc['20']['x'] + doc['20']['y'])*2*((info[floor_id]['18'][doc['18']]['strength'] + info[floor_id]['13'][doc['13']]['strength'])/2))/(info[floor_id]['15'][doc['15']]['strength']*doc['21']['x']))
-        x2 = (50/3)/(((doc['20']['x'] * doc['20']['y'] * info[floor_id]['17'][doc['17']]['strength']) + (doc['20']['x'] + doc['20']['y'])*2*((info[floor_id]['18'][doc['18']]['strength'] + info[floor_id]['13'][doc['13']]['strength'])/2))/(info[floor_id]['16'][doc['16']]['strength']*doc['21']['y']))
+        x1 = (50/3)/(((doc['20']['x'] * doc['20']['y'] * checkox_av(floor_id, doc, '17', 'strength')) + (doc['20']['x'] + doc['20']['y'])*2*((checkox_av(floor_id, doc, '18', 'strength') + info[floor_id]['13'][doc['13']]['strength'])/2))/(info[floor_id]['15'][doc['15']]['strength']*doc['21']['x']))
+        x2 = (50/3)/(((doc['20']['x'] * doc['20']['y'] * checkox_av(floor_id, doc, '17', 'strength')) + (doc['20']['x'] + doc['20']['y'])*2*((checkox_av(floor_id, doc, '18', 'strength') + info[floor_id]['13'][doc['13']]['strength'])/2))/(info[floor_id]['16'][doc['16']]['strength']*doc['21']['y']))
         print(min(x1, x2))
         return min(x1, x2)
 
