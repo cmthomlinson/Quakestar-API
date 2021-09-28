@@ -125,6 +125,9 @@ def foundations_av(floor_id, doc):
         if doc['8'][i] == True:
             sum_ += info[floor_id]['8'][i]['strength']
             true_.append(i)
+
+    if sum_ == 0:
+        return 1
     average = sum_/(len(true_))
     return average
 
