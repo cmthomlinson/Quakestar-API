@@ -119,13 +119,13 @@ def stregth_all(floor_id, doc):
 def foundations_av(floor_id, doc):
     f = open('coefficients.json')
     info = json.load(f)
-    true = []
+    true_ = []
     sum_ = 0
     for i in doc['8']:
-        if doc['8'][i] == "true":
+        if doc['8'][i] == True:
             sum_ += info[floor_id]['8'][i]['strength']
-            true.append(i)
-    average = sum_/(len(true))
+            true_.append(i)
+    average = sum_/(len(true_))
     return average
 
 def clad_struct_average(floor_id, doc): 

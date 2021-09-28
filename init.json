@@ -23,12 +23,12 @@
         },
         "8": {
             "response": {
-                "Brick (URM)": "false",
-                "Slab": "false",
-                "Timber piles": "true",
-                "Concrete piles": "false",
-                "Engineered poles": "false",
-                "Concrete walls": "false"
+                "Brick (URM)": false,
+                "Slab": false,
+                "Timber piles": true,
+                "Concrete piles": false,
+                "Engineered poles": false,
+                "Concrete walls": false
             }
         },
         "9": {
@@ -106,12 +106,12 @@
         },
         "8": {
             "response": {
-                "Brick (URM)": "false",
-                "Slab": "false",
-                "Timber piles": "true",
-                "Concrete piles": "false",
-                "Engineered poles": "false",
-                "Concrete walls": "false"
+                "Brick (URM)": false,
+                "Slab": false,
+                "Timber piles": true,
+                "Concrete piles": false,
+                "Engineered poles": false,
+                "Concrete walls": false
             }
         },
         "9": {
@@ -229,12 +229,12 @@
         },
         "8": {
             "response": {
-                "Brick (URM)": "false",
-                "Slab": "false",
-                "Timber piles": "true",
-                "Concrete piles": "false",
-                "Engineered poles": "false",
-                "Concrete walls": "false"
+                "Brick (URM)": false,
+                "Slab": false,
+                "Timber piles": true,
+                "Concrete piles": false,
+                "Engineered poles": false,
+                "Concrete walls": false
             }
         },
         "9": {
@@ -387,12 +387,12 @@
         },
         "8": {
             "response": {
-                "Brick (URM)": "false",
-                "Slab": "false",
-                "Timber piles": "true",
-                "Concrete piles": "false",
-                "Engineered poles": "false",
-                "Concrete walls": "false"
+                "Brick (URM)": false,
+                "Slab": false,
+                "Timber piles": true,
+                "Concrete piles": false,
+                "Engineered poles": false,
+                "Concrete walls": false
             }
         },
         "9": {
@@ -507,12 +507,12 @@
         },
         "8": {
             "response": {
-                "Brick (URM)": "false",
-                "Slab": "false",
-                "Timber piles": "true",
-                "Concrete piles": "false",
-                "Engineered poles": "false",
-                "Concrete walls": "false"
+                "Brick (URM)": false,
+                "Slab": false,
+                "Timber piles": true,
+                "Concrete piles": false,
+                "Engineered poles": false,
+                "Concrete walls": false
             }
         },
         "9": {
@@ -665,12 +665,12 @@
         },
         "8": {
             "response": {
-                "Brick (URM)": "false",
-                "Slab": "false",
-                "Timber piles": "true",
-                "Concrete piles": "false",
-                "Engineered poles": "false",
-                "Concrete walls": "false"
+                "Brick (URM)": false,
+                "Slab": false,
+                "Timber piles": true,
+                "Concrete piles": false,
+                "Engineered poles": false,
+                "Concrete walls": false
             }
         },
         "9": {
