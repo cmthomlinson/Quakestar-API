@@ -122,7 +122,7 @@ def checkox_av(floor_id, doc, que_id, type):
     true_ = []
     sum_ = 0
     for i in doc[que_id]:
-        if doc[que_id][i] == True:
+        if doc[int(que_id)][i] == True:
             sum_ += info[floor_id][que_id][i][type]
             true_.append(i)
 
