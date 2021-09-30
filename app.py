@@ -344,9 +344,7 @@ def results(floor_id, doc_id):
         "city": doc['city'],
         "postcode": doc['postcode'],
         "last_updated": doc['last_updated'],
-        "floor_id": doc['floor_id'],
-        "score": get_score(floor_id, doc_id),
-        "damage": get_damage(floor_id, doc_id),
+        "floor_id": doc['floor_id']
     }
 
     return jsonify(res)
