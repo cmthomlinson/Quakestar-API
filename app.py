@@ -337,13 +337,18 @@ def floor_area_wall_bracing(floor_id, doc):
 def results(floor_id, doc_id):
     doc = collection.find_one({"_id":ObjectId(doc_id)})
     res = {
-        "firstName": doc['firstName'],
-        "lastName": doc['lastName'],
+        "name": doc['name'],
+        "email": doc['email'],
         "address": doc['address'],
+        "suburb": doc['suburb'],
+        "city": doc['city'],
+        "postcode": doc['postcode'],
         "last_updated": doc['last_updated'],
+        "floor_id": doc['floor_id'],
         "score": get_score(floor_id, doc_id),
-        "damage": get_damage(floor_id, doc_id)
+        "damage": get_damage(floor_id, doc_id),
     }
+
     return jsonify(res)
 
 @app.route('/admin', methods=['GET'])
