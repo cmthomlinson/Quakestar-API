@@ -16,6 +16,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 client = pymongo.MongoClient(os.getenv("mongo_url"))
 db = client.test
 collection = db['Quakestar']
+issues = db['issues']
 
 @app.route("/")
 def index():
@@ -363,9 +364,18 @@ def get_doc(doc_id):
     doc = collection.find_one({"_id":ObjectId(doc_id)})
     return parse_json(doc)
 
-#Admin routes
-#Get all completed docs 
-
+@app.route('/issue', methods=['POST'])
+@cross_origin()
+def report_issue():
+    json_data = request.json
+    issue = {
+        "floor_id": json_data['issue']['floor_id'],
+        "que_id": json_data['issue']['que_id'],
+        "issue": json_data['issue']['issue'],
+        "submitted": str(datetime.datetime.now())
+    }
+    issues.insert_one(issue)
+    return jsonify('Success')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', threaded=True, port=5000)
