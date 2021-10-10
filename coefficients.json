@@ -269,7 +269,7 @@
             }
         },
         "9": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -368,7 +368,7 @@
 
         },
         "14": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -752,7 +752,7 @@
             }
         },
         "9": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -851,7 +851,7 @@
 
         },
         "14": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -895,7 +895,7 @@
             }
         },
         "16": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -1356,7 +1356,7 @@
             }
         },
         "9": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -1454,7 +1454,7 @@
             }
         },
         "14": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -1498,7 +1498,7 @@
             }
         },
         "16": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -1542,7 +1542,7 @@
             } 
         },
         "18": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1.1
             },
@@ -2075,7 +2075,7 @@
             }
         },
         "9": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -2173,7 +2173,7 @@
             }
         },
         "14": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -2217,7 +2217,7 @@
             }
         },
         "16": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 0,
                 "damage": 1
             },
@@ -2680,7 +2680,7 @@
             }
         },
         "9": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -2778,7 +2778,7 @@
             }
         },
         "14": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -2826,7 +2826,7 @@
             }
         },
         "16": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -2874,7 +2874,7 @@
             }  
         },
         "18": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 0,
                 "damage": 1
             },
@@ -3408,7 +3408,7 @@
             }
         },
         "9": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -3506,7 +3506,7 @@
             }
         },
         "14": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -3554,7 +3554,7 @@
             }
         },
         "16": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
             },
@@ -3602,7 +3602,7 @@
             }
         },
         "18": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1.1
             },
@@ -3650,7 +3650,7 @@
             } 
         },
         "20": {
-            "Timber truss/beams": {
+            "Timber trusses / joists": {
                 "strength": 0,
                 "damage": 1
             },
