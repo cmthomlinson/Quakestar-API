@@ -339,6 +339,8 @@ def floor_area_wall_bracing(floor_id, doc):
 @app.route('/results/<floor_id>/<doc_id>', methods=['GET'])
 @cross_origin()
 def results(floor_id, doc_id):
+    f = open('init.json')
+    info = json.load(f)
     doc = collection.find_one({"_id":ObjectId(doc_id)})
     res = {
         "name": doc['name'],
@@ -350,8 +352,22 @@ def results(floor_id, doc_id):
         "last_updated": doc['last_updated'],
         "floor_id": doc['floor_id']
     }
+    i = 1
+    state = False
+    while i < len(info[floor_id]) + 1:
+        complete_str = "completed_{}".format(str(i))
+        res[complete_str] = doc[complete_str]
+ 
+        i += 1
+        if i == len(info[floor_id]) + 1:
+            state = True
+            return res
+
+
+    
 
     return jsonify(res)
+
 
 @app.route('/admin', methods=['GET'])
 def admin():
