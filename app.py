@@ -53,10 +53,10 @@ def user_construct(user, floor_id):
     i = 1
     state = False
     while i < len(info[floor_id]) + 1:
-        user[str(i)] = {
-            "response": info[floor_id][str(i)]['response'],
-            "completed": False
-        }
+        user[str(i)] = info[floor_id][str(i)]['response']
+        complete_str = "completed_{}".format(str(i))
+        user[complete_str] = False
+            
         i += 1
         if i == len(info[floor_id]) + 1:
             state = True
@@ -95,8 +95,8 @@ def submit(floor_id, que_id, doc_id):
 
     json_data = request.json
     response = json_data['post']['response']
-
-    collection.update_one({"_id":ObjectId(doc_id)}, {"$set": {que_id: {"response": response, "completed": True}, "last_updated": datetime.datetime.now() }})
+    complete_str = "completed_{}".format(str(que_id))
+    collection.update_one({"_id":ObjectId(doc_id)}, {"$set": {que_id: response, complete_str: True, "last_updated": datetime.datetime.now()}})
 
     return jsonify('Success')
 
