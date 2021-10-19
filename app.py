@@ -357,7 +357,7 @@ def results(floor_id, doc_id):
     while i < len(info[floor_id]) + 1:
         complete_str = "completed_{}".format(str(i))
         res[complete_str] = doc[complete_str]
- 
+        res[i] = doc[i]
         i += 1
         if i == len(info[floor_id]) + 1:
             state = True
