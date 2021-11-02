@@ -411,6 +411,8 @@ def send_email():
     json_data = request.json
     results_link = json_data['results_url']
     user = json_data['user']
+    print(user)
+    print(user['email'])
     msg = Message('QuakeStar Housecheck', sender = 'cthomlinson8@gmail.com', recipients = [user['email']])
     msg.html  = render_template("email.html", user = json_data['user'], results_link = results_link)
     mail.send(msg)
