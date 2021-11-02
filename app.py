@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS, cross_origin
 import json
 import pymongo
@@ -6,12 +6,21 @@ from bson import ObjectId, json_util
 import datetime
 from dotenv import load_dotenv, find_dotenv
 import os
+from flask_mail import Mail, Message
 
 
 app = Flask(__name__)
+mail= Mail(app)
 CORS(app)
 load_dotenv(find_dotenv())
 app.config['CORS_HEADERS'] = 'Content-Type'
+
+app.config['MAIL_SERVER'] ='smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'cthomlinson8@gmail.com'
+app.config['MAIL_PASSWORD'] = 'Charlie100%'
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
 
 client = pymongo.MongoClient(os.getenv("mongo_url"))
 db = client.test
@@ -395,6 +404,27 @@ def report_issue():
     }
     issues.insert_one(issue)
     return jsonify('Success')
+
+user = {
+    "address": "99 portland rd",
+    "city": "Auckland",
+    "email": "cmthomlinson@gmail.com",
+    "name": "Charlie Thomlinson",
+    "postcode": "1050",
+    "suburb": "Auckland"
+}
+
+@app.route("/send_email")
+@cross_origin()
+def index():
+    json_data = request.json
+    user = json_data['data']['user']
+    results_link = json_data['data']['results_link']
+    msg = Message('QuakeStar Housecheck', sender = 'cthomlinson8@gmail.com', recipients = [user['email']])
+    msg.html  = render_template("index.html", user=user, results_link=results_link)
+    mail.send(msg)
+    return jsonify('Success')
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', threaded=True, port=5000)
