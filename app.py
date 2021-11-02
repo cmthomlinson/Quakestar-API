@@ -405,14 +405,14 @@ def report_issue():
     issues.insert_one(issue)
     return jsonify('Success')
 
-user = {
-    "address": "99 portland rd",
-    "city": "Auckland",
-    "email": "cmthomlinson@gmail.com",
-    "name": "Charlie Thomlinson",
-    "postcode": "1050",
-    "suburb": "Auckland"
-}
+#user = {
+    #"address": "99 portland rd",
+    #"city": "Auckland",
+    #"email": "cmthomlinson@gmail.com",
+    #"name": "Charlie Thomlinson",
+    #"postcode": "1050",
+    #"suburb": "Auckland"
+#}
 
 @app.route("/send_email")
 @cross_origin()
