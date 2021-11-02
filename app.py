@@ -419,7 +419,7 @@ def send_email():
 
     results_link = "http://localhost:3000/question/1/22/6180efd175b22b803fc61a96"
     msg = Message('QuakeStar Housecheck', sender = 'cthomlinson8@gmail.com', recipients = [user['email']])
-    msg.html  = render_template("index.html", user=user, results_link=results_link)
+    msg.html  = render_template("email.html", user=user, results_link=results_link)
     mail.send(msg)
     return jsonify('Success')
 
