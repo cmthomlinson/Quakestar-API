@@ -414,7 +414,7 @@ def report_issue():
     #"suburb": "Auckland"
 #}
 
-@app.route("/send_email")
+@app.route("/send_email", methods=['POST'])
 @cross_origin()
 def send_email():
     json_data = request.json
