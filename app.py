@@ -416,7 +416,7 @@ def report_issue():
 
 @app.route("/send_email")
 @cross_origin()
-def index():
+def send_email():
     json_data = request.json
     user = json_data['data']['user']
     results_link = json_data['data']['results_link']
