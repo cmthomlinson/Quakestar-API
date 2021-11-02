@@ -409,11 +409,9 @@ def report_issue():
 @app.route("/send_email", methods=['POST'])
 def send_email():
     json_data = request.json
-    user = json_data['user']
-    print(user)
     results_link = json_data['results_url']
-    msg = Message('QuakeStar Housecheck', sender = 'cthomlinson8@gmail.com', recipients = [user['email']])
-    msg.html  = render_template("email.html", user=user, results_link=results_link)
+    msg = Message('QuakeStar Housecheck', sender = 'cthomlinson8@gmail.com', recipients = json_data['user']['email'])
+    msg.html  = render_template("email.html", user=json_data['user'], results_link=results_link)
     mail.send(msg)
     return jsonify('Success')
 
