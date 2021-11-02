@@ -18,7 +18,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['MAIL_SERVER'] ='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'cthomlinson8@gmail.com'
-app.config['MAIL_PASSWORD'] = 'Charlie100%'
+app.config['MAIL_PASSWORD'] = 'fntfbdpbajxzqkzz'
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
 
