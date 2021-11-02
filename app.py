@@ -413,7 +413,7 @@ def send_email():
     user = json_data['user']
     print(user)
     print(user['email'])
-    msg = Message('QuakeStar Housecheck', sender = 'cthomlinson8@gmail.com', recipients = [user['email']])
+    msg = Message('QuakeStar Housecheck', sender = 'QuakeStar HouseCheck', recipients = [user['email']])
     msg.html  = render_template("email.html", user = json_data['user'], results_link = results_link)
     mail.send(msg)
     return jsonify('Success')
