@@ -415,7 +415,6 @@ user = {
 }
 
 @app.route("/send_email", methods=['POST'])
-@cross_origin()
 def send_email():
 
     results_link = "http://localhost:3000/question/1/22/6180efd175b22b803fc61a96"
