@@ -410,8 +410,9 @@ def report_issue():
 def send_email():
     json_data = request.json
     results_link = json_data['results_url']
-    msg = Message('QuakeStar Housecheck', sender = 'cthomlinson8@gmail.com', recipients = ["cmthomlinson@gmail.com"])
-    msg.html  = render_template("email.html", user=json_data['user'], results_link=results_link)
+    user = json_data['user']
+    msg = Message('QuakeStar Housecheck', sender = 'cthomlinson8@gmail.com', recipients = [user['email']])
+    msg.html  = render_template("email.html", user = json_data['user'], results_link = results_link)
     mail.send(msg)
     return jsonify('Success')
 
