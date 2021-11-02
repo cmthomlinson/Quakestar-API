@@ -416,8 +416,9 @@ user = {
 
 @app.route("/send_email", methods=['POST'])
 def send_email():
-
-    results_link = "http://localhost:3000/question/1/22/6180efd175b22b803fc61a96"
+    json_data = request.json
+    user = json_data['user']
+    results_link = json_data['results_url']
     msg = Message('QuakeStar Housecheck', sender = 'cthomlinson8@gmail.com', recipients = [user['email']])
     msg.html  = render_template("email.html", user=user, results_link=results_link)
     mail.send(msg)
