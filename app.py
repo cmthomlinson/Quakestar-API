@@ -405,19 +405,12 @@ def report_issue():
     issues.insert_one(issue)
     return jsonify('Success')
 
-user = {
-    "address": "99 portland rd",
-    "city": "Auckland",
-    "email": "cmthomlinson@gmail.com",
-    "name": "Charlie Thomlinson",
-    "postcode": "1050",
-    "suburb": "Auckland"
-}
 
 @app.route("/send_email", methods=['POST'])
 def send_email():
     json_data = request.json
     user = json_data['user']
+    print(user)
     results_link = json_data['results_url']
     msg = Message('QuakeStar Housecheck', sender = 'cthomlinson8@gmail.com', recipients = [user['email']])
     msg.html  = render_template("email.html", user=user, results_link=results_link)
