@@ -914,7 +914,7 @@
             "Concrete Block": {
                 "strength": 1,
                 "damage": 1
-            }, 
+            }
         },
         "17": {
             "Structural steel": {
