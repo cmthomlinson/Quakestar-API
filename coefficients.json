@@ -263,7 +263,7 @@
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete walls": {
+            "Concrete / Concrete block walls": {
                 "strength": 1,
                 "damage": 1
             }
@@ -734,7 +734,7 @@
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete walls": {
+            "Concrete / Concrete block walls": {
                 "strength": 1,
                 "damage": 1
             }
@@ -1329,7 +1329,7 @@
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete walls": {
+            "Concrete / Concrete block walls": {
                 "strength": 1,
                 "damage": 1
             }
@@ -2036,7 +2036,7 @@
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete walls": {
+            "Concrete / Concrete block walls": {
                 "strength": 1,
                 "damage": 1
             }
@@ -2629,7 +2629,7 @@
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete walls": {
+            "Concrete / Concrete block walls": {
                 "strength": 1,
                 "damage": 1
             }
@@ -3345,7 +3345,7 @@
                 "strength": 1,
                 "damage": 1
             },
-            "Concrete walls": {
+            "Concrete / Concrete block walls": {
                 "strength": 1,
                 "damage": 1
             }
