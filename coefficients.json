@@ -341,33 +341,6 @@
             }
         },
         "13": {
-            "Timber framing": {
-                "strength": 1,
-                "damage": 1
-            },
-            "Lightweight steel": {
-                "strength": 1,
-                "damage": 1
-            },                
-            "Structural steel": {
-                "strength": 1,
-                "damage": 1
-            },
-            "Concrete Block": {
-                "strength": 6,
-                "damage": 0.9
-            },
-            "Concrete": {
-                "strength": 3.5,
-                "damage": 0.8
-            },
-            "Brick (URM)": {
-                "strength": 8,
-                "damage": 1.3
-            }
-
-        },
-        "14": {
             "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
@@ -385,7 +358,7 @@
                 "damage": 1
             }
         },
-        "15": {
+        "14": {
             "Structural steel": {
                 "strength": 1,
                 "damage": 1 
@@ -411,7 +384,7 @@
                 "damage": 1.5
             }
         },
-        "16": {
+        "15": {
             "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1 
@@ -437,7 +410,7 @@
                 "damage": 1.5
             }
         },
-        "17": {
+        "16": {
             "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)": {
                 "strength": 1,
                 "damage": 1
@@ -459,7 +432,7 @@
                 "damage": 1
             }
         },
-        "18": {
+        "17": {
             "Concrete ": {
                 "strength": 3.5,
                 "damage": 0.8
@@ -481,7 +454,7 @@
                 "damage": 0.9
             }
         },
-        "22": {
+        "21": {
             "Regular": {
                 "strength": 1,
                 "damage": 1
@@ -839,33 +812,6 @@
             }
         },
         "13": {
-            "Timber framing": {
-                "strength": 1,
-                "damage": 1
-            },
-            "Lightweight steel": {
-                "strength": 1,
-                "damage": 1
-            },
-            "Structural steel": {
-                "strength": 1,
-                "damage": 1
-            },
-            "Concrete Block": {
-                "strength": 6,
-                "damage": 0.9
-            },
-            "Concrete": {
-                "strength": 3.5,
-                "damage": 0.9
-            },
-            "Brick (URM)": {
-                "strength": 8,
-                "damage": 1
-            }
-
-        },
-        "14": {
             "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
@@ -883,7 +829,7 @@
                 "damage": 1
             }
         },
-        "15": {
+        "14": {
             "Timber framing": {
                 "strength": 1,
                 "damage": 1
@@ -909,7 +855,7 @@
                 "damage": 2
             }
         },
-        "16": {
+        "15": {
             "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
@@ -931,7 +877,7 @@
                 "damage": 1
             }
         },
-        "17": {
+        "16": {
             "Structural steel": {
                 "strength": 1.5,
                 "damage": 1
@@ -953,37 +899,37 @@
                 "damage": 1.1
             },
             "Brick (URM)": {
+                "strength": 2,
+                "damage": 1.5
+            }
+        },
+        "17": {
+            "Structural steel ": {
+                "strength": 1.5,
+                "damage": 1
+            },
+            "Ply ": {
+                "strength": 2,
+                "damage": 1
+            },
+            "Gib / Plasterboard ": {
+                "strength": 1,
+                "damage": 1
+            },
+            "Concrete Block ": {
+                "strength": 3,
+                "damage": 1.1
+            },
+            "Concrete ": {
+                "strength": 3,
+                "damage": 1.1
+            },
+            "Brick (URM) ": {
                 "strength": 2,
                 "damage": 1.5
             }
         },
         "18": {
-            "Structural steel ": {
-                "strength": 1.5,
-                "damage": 1
-            },
-            "Ply ": {
-                "strength": 2,
-                "damage": 1
-            },
-            "Gib / Plasterboard ": {
-                "strength": 1,
-                "damage": 1
-            },
-            "Concrete Block ": {
-                "strength": 3,
-                "damage": 1.1
-            },
-            "Concrete ": {
-                "strength": 3,
-                "damage": 1.1
-            },
-            "Brick (URM) ": {
-                "strength": 2,
-                "damage": 1.5
-            }
-        },
-        "19": {
             "Structural steel": {
                 "strength": 1.5,
                 "damage": 1
@@ -1009,7 +955,7 @@
                 "damage": 2
             }
         },
-        "20": {
+        "19": {
             "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
@@ -1035,7 +981,7 @@
                 "damage": 2
             }
         },
-        "21": {
+        "20": {
             "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)": {
                 "strength": 1,
                 "damage": 1
@@ -1057,7 +1003,7 @@
                 "damage": 1
             }
         },
-        "22": {
+        "21": {
             "Concrete ":{
                 "strength": 3.5,
                 "damage": 0.8
@@ -1079,7 +1025,7 @@
                 "damage": 0.9
             }
         },
-        "23": {
+        "22": {
             "Concrete":{
                 "strength": 3.5,
                 "damage": 0.8
@@ -1101,7 +1047,7 @@
                 "damage": 0.9
             }
         },
-        "29": {
+        "28": {
             "Regular": {
                 "strength": 1,
                 "damage": 1
@@ -1461,32 +1407,6 @@
             }
         },
         "13": {
-            "Timber framing": {
-                "strength": 1,
-                "damage": 1
-            },
-            "Lightweight steel": {
-                "strength": 1,
-                "damage": 1
-            },
-            "Structural steel": {
-                "strength": 1,
-                "damage": 1
-            },
-            "Concrete Block": {
-                "strength": 6,
-                "damage": 0.9
-            },
-            "Concrete": {
-                "strength": 3.5,
-                "damage": 0.8
-            },
-            "Brick (URM)": {
-                "strength": 8,
-                "damage": 1.3
-            }
-        },
-        "14": {
             "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
@@ -1504,7 +1424,7 @@
                 "damage": 1
             }
         },
-        "15": {
+        "14": {
             "Timber framing": {
                 "strength": 1,
                 "damage": 1
@@ -1530,7 +1450,7 @@
                 "damage": 2
             }
         },
-        "16": {
+        "15": {
             "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1
@@ -1548,7 +1468,7 @@
                 "damage": 1.2
             }
         },
-        "17": {
+        "16": {
             "Timber framing": {
                 "strength": 1,
                 "damage": 1
@@ -1574,7 +1494,7 @@
                 "damage": 2
             } 
         },
-        "18": {
+        "17": {
             "Timber trusses / joists": {
                 "strength": 1,
                 "damage": 1.1
@@ -1592,7 +1512,7 @@
                 "damage": 1.2
             }  
         },
-        "19": {
+        "18": {
             "Structural steel": {
                 "strength": 1.5,
                 "damage": 1
@@ -1618,7 +1538,7 @@
                 "damage": 1.5
             }
         },
-        "20": {
+        "19": {
             "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
@@ -1644,7 +1564,7 @@
                 "damage": 1.5
             }  
         },
-        "21": {
+        "20": {
             "Structural steel": {
                 "strength": 1.5,
                 "damage": 1
@@ -1670,7 +1590,7 @@
                 "damage": 2
             }  
         },
-        "22": {
+        "21": {
             "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
@@ -1696,7 +1616,7 @@
                 "damage": 2
             }   
         },
-        "23": {
+        "22": {
             "Structural steel": {
                 "strength": 1.5,
                 "damage": 1
@@ -1722,7 +1642,7 @@
                 "damage": 2
             }   
         },
-        "24": {
+        "23": {
             "Structural steel ": {
                 "strength": 1.5,
                 "damage": 1
@@ -1748,7 +1668,7 @@
                 "damage": 2
             }     
         },
-        "25": {
+        "24": {
             "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)": {
                 "strength": 1,
                 "damage": 1
@@ -1770,7 +1690,7 @@
                 "damage": 1
             }
         },
-        "26": {
+        "25": {
             "Concrete ":{
                 "strength": 3.5,
                 "damage": 0.8
@@ -1792,7 +1712,7 @@
                 "damage": 0.9
             }
         },
-        "27": {
+        "26": {
             "Concrete":{
                 "strength": 3.5,
                 "damage": 0.8
@@ -1814,7 +1734,7 @@
                 "damage": 0.9
             }
         },
-        "28": {
+        "27": {
             "Concrete ":{
                 "strength": 3.5,
                 "damage": 0.8
@@ -1836,7 +1756,7 @@
                 "damage": 0.9
             }
         },
-        "36": {
+        "35": {
             "Regular": {
                 "strength": 1,
                 "damage": 1

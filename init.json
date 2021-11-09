@@ -44,18 +44,15 @@
             "response": "None"
         },
         "13": {
-            "response": "Timber framing"
-        },
-        "14": {
             "response": "Timber trusses / joists"
         },
-        "15": {
+        "14": {
             "response": "Gib / Plasterboard"
         },
-        "16": {
+        "15": {
             "response": "Gib / Plasterboard "
         },
-        "17": {
+        "16": {
             "response": {
                 "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)": true,
                 "Heavy tiles (Examples: Clay, concrete or similar weight)": false,
@@ -65,13 +62,19 @@
                 
             }
         },
-        "18": {
+        "17": {
             "response": {
                 "Concrete ": false,
                 "Timber (Example: weatherboards) ": true,
                 "Concrete block ": false,
                 "Brick or brick veneer ": false,
                 "Stucco / Monolithic or similar ": false
+            }
+        },
+        "18": {
+            "response": {
+                "x": 15,
+                "y": 15
             }
         },
         "19": {
@@ -82,17 +85,11 @@
         },
         "20": {
             "response": {
-                "x": 15,
-                "y": 15
-            }
-        },
-        "21": {
-            "response": {
                 "x": 25,
                 "y": 20
             }
         },
-        "22": {
+        "21": {
             "response": "Regular"
         }
 
@@ -143,38 +140,34 @@
             "response": "None"
         },
         "13": {
-            "response": "Timber framing"
+            "response": "Timber trusses / joists"
 
         },
         "14": {
-            "response": "Timber trusses / joists"
-
-        },
-        "15": {
             "response": "Timber framing"
 
         },
-        "16": {
+        "15": {
             "response": "Timber trusses / joists"
 
         },
-        "17": {
+        "16": {
             "response": "Gib / Plasterboard"
+
+        },
+        "17": {
+            "response": "Gib / Plasterboard "
 
         },
         "18": {
-            "response": "Gib / Plasterboard "
-
-        },
-        "19": {
             "response": "Gib / Plasterboard"
 
         },
-        "20": {
+        "19": {
             "response": "Gib / Plasterboard "
 
         },
-        "21": {
+        "20": {
             "response": {
                 "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)": true,
                 "Heavy tiles (Examples: Clay, concrete or similar weight)": false,
@@ -184,7 +177,7 @@
                 
             }
         },
-        "22": {
+        "21": {
             "response": {
                 "Concrete ": false,
                 "Timber (Example: weatherboards) ": true,
@@ -193,7 +186,7 @@
                 "Stucco / Monolithic or similar ": false
             }
         },
-        "23": {
+        "22": {
             "response": {
                 "Concrete": false,
                 "Timber (Example: weatherboards)": true,
@@ -202,11 +195,18 @@
                 "Stucco / Monolithic or similar": false
             }
         },
+        "23": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+        },
         "24": {
             "response": {
                 "x": 15,
                 "y": 15
             }
+
         },
         "25": {
             "response": {
@@ -218,9 +218,8 @@
         "26": {
             "response": {
                 "x": 15,
-                "y": 15
+                "y": 25
             }
-
         },
         "27": {
             "response": {
@@ -229,12 +228,6 @@
             }
         },
         "28": {
-            "response": {
-                "x": 15,
-                "y": 25
-            }
-        },
-        "29": {
             "response": "Regular"
         }
 
@@ -285,54 +278,50 @@
             "response": "None"
         },
         "13": {
-            "response": "Timber framing"
+            "response": "Timber trusses / joists"
 
         },
         "14": {
-            "response": "Timber trusses / joists"
+            "response": "Timber framing"
 
         },
         "15": {
-            "response": "Timber framing"
+            "response": "Timber trusses / joists"
 
         },
         "16": {
-            "response": "Timber trusses / joists"
-
-        },
-        "17": {
             "response": "Timber framing"
 
         },
-        "18": {
+        "17": {
             "response": "Timber trusses / joists"
 
         },
-        "19": {
+        "18": {
             "response": "Gib / Plasterboard"
+
+        },
+        "19": {
+            "response": "Gib / Plasterboard "
 
         },
         "20": {
-            "response": "Gib / Plasterboard "
+            "response": "Gib / Plasterboard"
 
         },
         "21": {
-            "response": "Gib / Plasterboard"
+            "response": "Gib / Plasterboard "
 
         },
         "22": {
-            "response": "Gib / Plasterboard "
-
-        },
-        "23": {
             "response": "Gib / Plasterboard"
 
         },
-        "24": {
+        "23": {
             "response": "Gib / Plasterboard "
 
         },
-        "25": {
+        "24": {
             "response": {
                 "Steel sheet (Examples: Corrugated iron, long-run metal or similar weight)": true,
                 "Heavy tiles (Examples: Clay, concrete or similar weight)": false,
@@ -342,7 +331,7 @@
                 
             }
         },
-        "26": {
+        "25": {
             "response": {
                 "Concrete ": false,
                 "Timber (Example: weatherboards) ": true,
@@ -351,7 +340,7 @@
                 "Stucco / Monolithic or similar ": false
             }
         },
-        "27": {
+        "26": {
             "response": {
                 "Concrete": false,
                 "Timber (Example: weatherboards)": true,
@@ -360,7 +349,7 @@
                 "Stucco / Monolithic or similar": false
             }
         },
-        "28": {
+        "27": {
             "response": {
                 "Concrete ": false,
                 "Timber (Example: weatherboards) ": true,
@@ -368,6 +357,13 @@
                 "Brick or brick veneer ": false,
                 "Stucco / Monolithic or similar ": false
             }
+        },
+        "28": {
+            "response": {
+                "x": 15,
+                "y": 15
+            }
+
         },
         "29": {
             "response": {
@@ -393,7 +389,7 @@
         "32": {
             "response": {
                 "x": 15,
-                "y": 15
+                "y": 25
             }
 
         },
@@ -412,13 +408,6 @@
 
         },
         "35": {
-            "response": {
-                "x": 15,
-                "y": 25
-            }
-
-        },
-        "36": {
             "response": "Regular"
         }
     },
