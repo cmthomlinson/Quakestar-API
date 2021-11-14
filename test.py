@@ -208,4 +208,8 @@ def foundations_av(floor_id, doc):
 
             
 
-foundations_av("1")
+def get_docs():
+    docs = list(collection.find({}))
+    print(docs)
+
+get_docs()

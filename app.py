@@ -418,6 +418,10 @@ def send_email():
     mail.send(msg)
     return jsonify('Success')
 
+@app.route("/get_all_docs", methods=['GET'])
+def get_docs():
+    docs = list(collection.find({}))
+    return jsonify(docs)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', threaded=True, port=5000)
