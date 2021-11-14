@@ -424,7 +424,8 @@ def get_docs():
     docs = collection.find({})
     for doc in docs:
         submission = {
-            "_id": str(doc['_id'])
+            "_id": str(doc['_id']),
+            "floor_id": doc['floor_id']
         }
         all_docs.append(submission)
 
