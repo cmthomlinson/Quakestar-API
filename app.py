@@ -104,8 +104,11 @@ def submit(floor_id, que_id, doc_id):
 
     json_data = request.json
     response = json_data['post']['response']
+    score = json_data['post']['score']
+    damage = json_data['post']['damage']
     complete_str = "completed_{}".format(str(que_id))
-    collection.update_one({"_id":ObjectId(doc_id)}, {"$set": {que_id: response, complete_str: True, "last_updated": datetime.datetime.now()}})
+
+    collection.update_one({"_id":ObjectId(doc_id)}, {"$set": {que_id: response, complete_str: True, score:score, damage:damage, "last_updated": datetime.datetime.now()}})
 
     return jsonify('Success')
 
