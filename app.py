@@ -286,8 +286,8 @@ def floor_area_wall_bracing(floor_id, doc):
 
     #1   12-20 Roofcladding-16 Roofarea-19
     if floor_id == "1":
-    x1 = (50/3)/(((doc['19']['x'] * doc['19']['y'] * checkox_av(floor_id, doc, '16', 'strength')) + (doc['18']['x'] + doc['18']['y'])*2*((checkox_av(floor_id, doc, '17', 'strength') + 1)/2))/(info[floor_id]['14'][doc['14']]['strength']*doc['20']['x']))
-    x2 = (50/3)/(((doc['19']['x'] * doc['19']['y'] * checkox_av(floor_id, doc, '16', 'strength')) + (doc['18']['x'] + doc['18']['y'])*2*((checkox_av(floor_id, doc, '17', 'strength') + 1)/2))/(info[floor_id]['15'][doc['15']]['strength']*doc['20']['y']))
+        x1 = (50/3)/(((doc['19']['x'] * doc['19']['y'] * checkox_av(floor_id, doc, '16', 'strength')) + (doc['18']['x'] + doc['18']['y'])*2*((checkox_av(floor_id, doc, '17', 'strength') + 1)/2))/(info[floor_id]['14'][doc['14']]['strength']*doc['20']['x']))
+        x2 = (50/3)/(((doc['19']['x'] * doc['19']['y'] * checkox_av(floor_id, doc, '16', 'strength')) + (doc['18']['x'] + doc['18']['y'])*2*((checkox_av(floor_id, doc, '17', 'strength') + 1)/2))/(info[floor_id]['15'][doc['15']]['strength']*doc['20']['y']))
         print(min(x1, x2))
         return min(x1, x2)
 
