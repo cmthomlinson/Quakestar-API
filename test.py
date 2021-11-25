@@ -172,9 +172,11 @@ def test(floor_id, doc_id):
     info = json.load(f)
     doc = collection.find_one({"_id":ObjectId(doc_id)})
 
-    x1 = (50/3)/(((doc['19']['x'] * doc['19']['y'] * checkox_av(floor_id, doc, '16', 'strength')) + (doc['18']['x'] + doc['18']['y'])*2*((checkox_av(floor_id, doc, '17', 'strength') + 1)/2))/(info[floor_id]['14'][doc['14']]['strength']*doc['20']['x']))
-    x2 = (50/3)/(((doc['19']['x'] * doc['19']['y'] * checkox_av(floor_id, doc, '16', 'strength')) + (doc['18']['x'] + doc['18']['y'])*2*((checkox_av(floor_id, doc, '17', 'strength') + 1)/2))/(info[floor_id]['15'][doc['15']]['strength']*doc['20']['y']))
-    print(x1, x2)
+    clad_av = (checkox_av(floor_id, doc, '16', 'damage') + checkox_av(floor_id, doc, '17', 'damage') + 3)/5
+    structure_av = (checkox_av(floor_id, doc, '8', 'strength') + info[floor_id]['9'][doc['9']]['damage'] + 1 + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + 12)/18
+    print("clad_av: {}".format(clad_av))
+    print("structure_av: {}".format(structure_av))
+
 
 
 

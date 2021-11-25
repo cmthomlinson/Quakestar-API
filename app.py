@@ -151,7 +151,7 @@ def clad_struct_average(floor_id, doc):
 
     if floor_id == "1":
         clad_av = (checkox_av(floor_id, doc, '16', 'damage') + checkox_av(floor_id, doc, '17', 'damage') + 3)/5
-        structure_av = (checkox_av(floor_id, doc, '8', 'strength') + info[floor_id]['9'][doc['9']]['damage'] + 1 + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + 12)/8
+        structure_av = (checkox_av(floor_id, doc, '8', 'strength') + info[floor_id]['9'][doc['9']]['damage'] + 1 + info[floor_id]['13'][doc['13']]['damage'] + info[floor_id]['14'][doc['14']]['damage'] + info[floor_id]['15'][doc['15']]['damage'] + 12)/18
         print("clad_av: {}".format(clad_av))
         print("structure_av: {}".format(structure_av))
         return clad_av*structure_av
