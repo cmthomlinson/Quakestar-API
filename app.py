@@ -202,17 +202,13 @@ def damage_all(floor_id, doc):
     return site*building*clad_struct_average(floor_id, doc)
 
 
-def get_score(floor_id, doc):
+def get_score(floor_id, doc, type):
     score = round(stregth_all(floor_id, doc)*floor_area_wall_bracing(floor_id, doc), 0)
-
-    return score
-
-def get_damage(floor_id, doc):
-    score = stregth_all(floor_id, doc)*floor_area_wall_bracing(floor_id, doc)
-    damage = round((2000/score)*damage_all(floor_id, doc),0)
-
-    return damage
-
+    if type == "strength":
+        return score
+    if type == "damage":
+        damage = round((2000/score)*damage_all(floor_id, doc),0)
+        return damage
 
 @app.route('/sd/<floor_id>/<doc_id>', methods=['GET'])
 @cross_origin()
@@ -221,8 +217,8 @@ def sd(floor_id, doc_id):
     info = json.load(f)
     doc = collection.find_one({"_id":ObjectId(doc_id)})
     res = {
-        "score": get_score(floor_id, doc),
-        "damage": get_damage(floor_id, doc)
+        "score": get_score(floor_id, doc, "strength"),
+        "damage": get_score(floor_id, doc, "damage")
     }
 
     return jsonify(res)
