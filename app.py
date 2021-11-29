@@ -385,22 +385,22 @@ def login():
     email = json_data['user']['email']
     password = json_data['user']['password']
     user = users.find_one({"email": email})
-    if user is None or not check_password(user['password_hash'], password):
+    if user is None or not check_password(user['password'], password):
         return jsonify({'message':'Either wrong email or password'}), 401
     access_token = create_access_token(identity=email)
     return jsonify(access_token=access_token)
 
-@app.route('/sign_up', methods=['GET'])
-def sign_up():
-    json_data = request.json
-    form_user = {
-        "name": "Charlie Thomlinson",
-        "email": "cmthomlinson@gmail.com",
-        "password": set_password("Charlie100%"),
-        "access": 1
-    }
-    users.insert_one(form_user)
-    return jsonify('Success')
+#@app.route('/sign_up', methods=['GET'])
+#def sign_up():
+    #json_data = request.json
+    #form_user = {
+        #"name": "Charlie Thomlinson",
+        #"email": "cmthomlinson@gmail.com",
+        #"password": set_password("Charlie100%"),
+        #"access": 1
+    #}
+    #users.insert_one(form_user)
+    #return jsonify('Success')
 
 @app.route('/protected', methods=['GET'])
 @jwt_required
