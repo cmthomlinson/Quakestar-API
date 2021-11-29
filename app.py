@@ -7,25 +7,29 @@ import datetime
 from dotenv import load_dotenv, find_dotenv
 import os
 from flask_mail import Mail, Message
-
+from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, JWTManager
+from werkzeug.security import check_password_hash, generate_password_hash
 
 app = Flask(__name__)
 mail= Mail(app)
 CORS(app)
 load_dotenv(find_dotenv())
 app.config['CORS_HEADERS'] = 'Content-Type'
-
 app.config['MAIL_SERVER'] ='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'quakestarhousecheck@gmail.com'
 app.config['MAIL_PASSWORD'] = 'assnilspekoojeaw'
 app.config['MAIL_USE_SSL'] = True
+app.config['JWT_SECRET_KEY'] = os.getenv("secrete_key")
 mail = Mail(app)
+jwt = JWTManager(app)
+
 
 client = pymongo.MongoClient(os.getenv("mongo_url"))
 db = client.test
 collection = db['Quakestar']
 issues = db['issues']
+users = db['users']
 
 @app.route("/")
 def index():
@@ -367,6 +371,43 @@ def results(floor_id, doc_id):
     
 
     return jsonify(res)
+
+def set_password(password):
+    password_hash = generate_password_hash(password)
+    return password_hash
+
+def check_password(password_hash, password):
+    return check_password_hash(password_hash, password)
+
+@app.route("/login", methods=["POST"])
+def login():
+    json_data = request.json
+    email = json_data['user']['email']
+    password = json_data['user']['password']
+    user = users.find_one({"email": email})
+    if user is None or not check_password(user['password_hash'], password):
+        return jsonify({'message':'Either wrong email or password'}), 401
+    access_token = create_access_token(identity=email)
+    return jsonify(access_token=access_token)
+
+@app.route('/sign_up', methods=['GET'])
+def sign_up():
+    json_data = request.json
+    form_user = {
+        "name": "Charlie Thomlinson",
+        "email": "cmthomlinson@gmail.com",
+        "password": set_password("Charlie100%"),
+        "access": 1
+    }
+    users.insert_one(form_user)
+    return jsonify('Success')
+
+@app.route('/protected', methods=['GET'])
+@jwt_required
+def protected():
+    current_user = get_jwt_identity()
+    return jsonify(logged_in_as=current_user)
+
 
 
 @app.route('/admin', methods=['GET'])
