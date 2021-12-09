@@ -1,6 +1,6 @@
 import json
 
-from utils import checkox_av
+from calculations.utils import checkox_av
 
 def stregth_all(floor_id, doc):
     f = open('coefficients.json')
