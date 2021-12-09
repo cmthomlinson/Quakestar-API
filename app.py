@@ -89,7 +89,7 @@ def sd(floor_id, doc_id):
     info = json.load(f)
     doc = collection.find_one({"_id":ObjectId(doc_id)})
     strength = round(stregth_all(floor_id, doc)*floor_area_wall_bracing(floor_id, doc), 0)
-    damage = round(0.15/(3^((strength/50)^1.5)) * 9 *((damage_all(floor_id, doc))) + 10/(1.5^(strength(100)))/100)
+    damage = round((0.15/(3^((float(strength/50))^1.5)) * 9 *((damage_all(floor_id, doc))) + 10/(1.5^(strength(100)))/100))
     res = {
         "score": strength,
         "damage": damage
