@@ -8,7 +8,7 @@ def damage_all(floor_id, doc):
     info = json.load(f)
     site = max(info[floor_id]['2'][doc['2']]['damage'], info[floor_id]['3'][doc['3']]['damage'], 1, info[floor_id]['3'][doc['3']]['damage'])
     building = (info[floor_id]['5'][doc['5']]['damage'] * info[floor_id]['6'][doc['6']]['damage'] * info[floor_id]['7'][doc['7']]['damage'])
-    appendages = max(irregulaties(floor_id, doc), min(info[floor_id]['10'][doc['10']]['strength'], info[floor_id]['11'][doc['11']]['strength'], info[floor_id]['12'][doc['12']]['strength']))
+    appendages = max(irregulaties(floor_id, doc), max(info[floor_id]['10'][doc['10']]['strength'], info[floor_id]['11'][doc['11']]['strength'], info[floor_id]['12'][doc['12']]['strength']))
     print("site_damage: {}".format(site))
     print("building_damage: {}".format(building))
 
