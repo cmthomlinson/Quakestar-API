@@ -11,7 +11,7 @@ from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_requir
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from calculations.damage import damage_all
-from calculations.strength import stregth_all, floor_area_wall_bracing
+from calculations.strength import stregth_all, floor_area_wall_bracing, irregulaties
 from auth.user import user_construct
 
 app = Flask(__name__)
@@ -95,7 +95,9 @@ def sd(floor_id, doc_id):
     damage = round(100*((0.15/t)*k + c), 0)
     res = {
         "score": strength,
-        "damage": damage
+        "damage": damage,
+        "ireg:": irregulaties(floor_id, doc)
+
     }
 
     return jsonify(res)
