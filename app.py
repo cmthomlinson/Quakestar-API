@@ -96,7 +96,7 @@ def sd(floor_id, doc_id):
     res = {
         "score": strength,
         "damage": damage,
-        "ireg:": irregulaties(floor_id, doc)
+        "ireg": irregulaties(floor_id, doc)
 
     }
 
