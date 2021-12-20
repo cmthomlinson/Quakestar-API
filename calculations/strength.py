@@ -8,7 +8,7 @@ def stregth_all(floor_id, doc):
     site = (info[floor_id]['2'][doc['2']]['strength'] + info[floor_id]['3'][doc['3']]['strength'] + 1 + info[floor_id]['4'][doc['4']]['strength']) / 4
     building_data1 = info[floor_id]['5'][doc['5']]['strength']
     building_data2 = (info[floor_id]['6'][doc['6']]['strength'] + info[floor_id]['7'][doc['7']]['strength'])/2
-    appendages = (irregulaties(floor_id, doc) * min(info[floor_id]['10'][doc['10']]['strength'], info[floor_id]['11'][doc['11']]['strength'], info[floor_id]['12'][doc['12']]['strength']))**1/2
+    appendages = (irregulaties(floor_id, doc) * (info[floor_id]['10'][doc['10']]['strength'] + info[floor_id]['11'][doc['11']]['strength'] + info[floor_id]['12'][doc['12']]['strength'])/3)**1/2
     seismic_coefficent = info[floor_id]['1'][doc['1']]
     foundations = checkox_av(floor_id, doc, '8', 'strength')
 
