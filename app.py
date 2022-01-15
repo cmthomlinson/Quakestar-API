@@ -2,17 +2,18 @@ from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS, cross_origin
 import json
 import pymongo
+from functools import wraps
 from bson import ObjectId, json_util
 import datetime
 from dotenv import load_dotenv, find_dotenv
 import os
 from flask_mail import Mail, Message
 from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required, JWTManager
-from werkzeug.security import check_password_hash, generate_password_hash
+import jwt
 
 from calculations.damage import damage_all
 from calculations.strength import stregth_all, floor_area_wall_bracing, irregulaties
-from auth.user import user_construct
+from auth.user import user_construct, set_password, check_password
 
 app = Flask(__name__)
 mail= Mail(app)
@@ -24,7 +25,6 @@ app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'quakestarhousecheck@gmail.com'
 app.config['MAIL_PASSWORD'] = 'assnilspekoojeaw'
 app.config['MAIL_USE_SSL'] = True
-app.config['JWT_SECRET_KEY'] = os.getenv("secrete_key")
 mail = Mail(app)
 jwt = JWTManager(app)
 
@@ -132,25 +132,6 @@ def results(floor_id, doc_id):
 
     return jsonify(res)
 
-def set_password(password):
-    password_hash = generate_password_hash(password)
-    return password_hash
-
-def check_password(password_hash, password):
-    return check_password_hash(password_hash, password)
-
-@app.route("/login", methods=["POST"])
-def login():
-    json_data = request.json
-    email = json_data['user']['email']
-    password = json_data['user']['password']
-    user = users.find_one({"email": email})
-    if user is None or not check_password(user['password'], password):
-        return jsonify({'message':'Either wrong email or password'}), 401
-    access_token = create_access_token(identity=email)
-    return jsonify(access_token=access_token)
-
-
 @app.route('/protected', methods=['GET'])
 @jwt_required
 def protected():
@@ -200,18 +181,41 @@ def send_email():
     mail.send(msg)
     return jsonify('Success')
 
-@app.route("/get_all_docs", methods=['GET'])
-def get_docs():
-    all_docs = []
-    docs = collection.find({})
-    for doc in docs:
-        submission = {
-            "_id": str(doc['_id']),
-            "floor_id": doc['floor_id']
-        }
-        all_docs.append(submission)
+#login
+@app.route("/login", methods=['POST'])
+def login():
+    json_data = request.json
+    email = json_data['user']['email']
+    password = json_data['user']['password']
+    user = users.find_one({"email": email})
+    if user is None or not check_password(user['password'], password):
+        return jsonify({'message':'Wrong creds'}), 400
+    payload = {
+        "exp": datetime.datetime.utcnow() + datetime.timedelta(days=0.5),
+        "user": user,
+    }
+    jwt_token = jwt.encode(payload, os.getenv("SECRET_KEY"), algorithm='HS256')
+    return jsonify({'token': jwt_token})
 
-    return jsonify(all_docs)
+def admin_required():
+    def wrapper(fn):
+        @wraps(fn)
+        def decorator(*args, **kwargs):
+            jwt_token = request.headers.get("Authorization")
+            payload = jwt.decode(jwt_token, os.getenv("SECRET_KEY"), algorithm='HS256')
+            if payload.user.admin:
+                return fn(*args, **kwargs)
+            else:
+                return jsonify({'message': 'Wrong creds'}), 400
+        return decorator
+    return wrapper
+
+@app.route('/admin', methods=['GET'])
+@admin_required
+def admin():
+
+    return jsonify('Success')
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', threaded=True, port=5000)
