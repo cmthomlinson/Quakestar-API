@@ -132,18 +132,7 @@ def results(floor_id, doc_id):
 
     return jsonify(res)
 
-@app.route('/protected', methods=['GET'])
-@jwt_required
-def protected():
-    current_user = get_jwt_identity()
-    return jsonify(logged_in_as=current_user)
 
-
-
-@app.route('/admin', methods=['GET'])
-def admin():
-    submissions = collection.find()
-    return jsonify(submissions)
 
 def parse_json(data):
     return json.loads(json_util.dumps(data))
