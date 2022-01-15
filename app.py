@@ -200,7 +200,7 @@ def admin_required():
     return wrapper
 
 @app.route('/admin', methods=['GET'])
-@admin_required
+@admin_required()
 def admin():
 
     return jsonify('Success')
