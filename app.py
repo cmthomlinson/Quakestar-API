@@ -13,13 +13,13 @@ import jwt
 
 from calculations.damage import damage_all
 from calculations.strength import stregth_all, floor_area_wall_bracing, irregulaties
-from auth.user import user_construct, set_password, check_password
+from auth.user import user_construct
 
 app = Flask(__name__)
 mail= Mail(app)
 CORS(app)
 load_dotenv(find_dotenv())
-app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['CORS_HEADERS'] = 'application/json'
 app.config['MAIL_SERVER'] ='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'quakestarhousecheck@gmail.com'
@@ -170,40 +170,7 @@ def send_email():
     mail.send(msg)
     return jsonify('Success')
 
-#login
-@app.route("/login", methods=['POST'])
-def login():
-    json_data = request.json
-    email = json_data['user']['email']
-    password = json_data['user']['password']
-    user = users.find_one({"email": email})
-    if user is None or not check_password(user['password'], password):
-        return jsonify({'message':'Wrong creds'}), 400
-    payload = {
-        "exp": datetime.datetime.utcnow() + datetime.timedelta(days=0.5),
-        "user": user,
-    }
-    jwt_token = jwt.encode(payload, os.getenv("SECRET_KEY"), algorithm='HS256')
-    return jsonify({'token': jwt_token})
 
-def admin_required():
-    def wrapper(fn):
-        @wraps(fn)
-        def decorator(*args, **kwargs):
-            jwt_token = request.headers.get("Authorization")
-            payload = jwt.decode(jwt_token, os.getenv("SECRET_KEY"), algorithm='HS256')
-            if payload.user.admin:
-                return fn(*args, **kwargs)
-            else:
-                return jsonify({'message': 'Wrong creds'}), 400
-        return decorator
-    return wrapper
-
-@app.route('/admin', methods=['GET'])
-@admin_required()
-def admin():
-
-    return jsonify('Success')
 
 
 if __name__ == "__main__":
