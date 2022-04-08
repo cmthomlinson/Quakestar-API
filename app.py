@@ -91,8 +91,14 @@ def sd(floor_id, doc_id):
     strength = round(stregth_all(floor_id, doc)*floor_area_wall_bracing(floor_id, doc), 0)
     c = (10/(1.5**(strength/100))/100)
     t = 3**((strength/50)**1.5)
-    z = irregulaties(floor_id, doc)* max(info[floor_id]['10'][doc['10']]['strength'], info[floor_id]['11'][doc['11']]['strength'], info[floor_id]['12'][doc['12']]['strength'])
-    k = 9*((damage_all(floor_id, doc)*z)**0.25)
+    m = max(info[floor_id]['10'][doc['10']]['strength'], info[floor_id]['11'][doc['11']]['strength'], info[floor_id]['12'][doc['12']]['strength'])
+    z = irregulaties(floor_id, doc)*m
+    y = damage_all(floor_id, doc)*z
+    k = 9*((y)**0.25)
+    print(z)
+    print(k)
+    print(m)
+    print(y)
     damage = round(100*((0.15/t)*k + c), 0)
     res = {
         "score": strength,
