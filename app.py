@@ -92,13 +92,15 @@ def sd(floor_id, doc_id):
     c = (10/(1.5**(strength/100))/100)
     t = 3**((strength/50)**1.5)
     m = max(info[floor_id]['10'][doc['10']]['strength'], info[floor_id]['11'][doc['11']]['strength'], info[floor_id]['12'][doc['12']]['strength'])
-    z = irregulaties(floor_id, doc)*m
-    y = damage_all(floor_id, doc)*z
+    i = irregulaties(floor_id, doc)
+    z = i*m
+    n = damage_all(floor_id, doc)
+    y = n*z
     k = 9*((y)**0.25)
-    print(z)
-    print(k)
+    print("irregularities:{}".format(i))
+    print("y: {}".format(y))
     print(m)
-    print(y)
+    print(n)
     damage = round(100*((0.15/t)*k + c), 0)
     res = {
         "score": strength,
