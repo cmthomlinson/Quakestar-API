@@ -28,6 +28,7 @@ def irregulaties(floor_id, doc):
         x0 = 1
         x1 = ((doc['26']['x']*info[floor_id]['16'][doc['16']]['strength'])/(doc['27']['x']*info[floor_id]['18'][doc['18']]['strength']))*1.2
         x2 = ((doc['26']['y']*info[floor_id]['17'][doc['17']]['strength'])/(doc['27']['y']*info[floor_id]['19'][doc['19']]['strength']))*1.2
+        print(min(x0, x1, x2)*info[floor_id]['28'][doc['28']]['strength'])
         return min(x0, x1, x2)*info[floor_id]['28'][doc['28']]['strength']
 
     #3   12-34 Roofcladding-24 Roofarea-31

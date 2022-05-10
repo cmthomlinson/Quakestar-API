@@ -97,10 +97,6 @@ def sd(floor_id, doc_id):
     n = damage_all(floor_id, doc)
     y = n*z
     k = 9*((y)**0.25)
-    print("irregularities:{}".format(i))
-    print("y: {}".format(y))
-    print(m)
-    print(n)
     damage = round(100*((0.15/t)*k + c), 0)
     res = {
         "score": strength,
