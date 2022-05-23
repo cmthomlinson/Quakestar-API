@@ -175,18 +175,7 @@ def send_email():
     mail.send(msg)
     return jsonify('Success')
 
-#Notify David
-@app.route("/notify_email", methods=['POST'])
-def send_email():
-    json_data = request.json
-    results_link = json_data['results_url']
-    user = json_data['user']
-    print(user)
-    print(user['email'])
-    msg = Message('Someone started a HouseCheck', sender = 'QuakeStar HouseCheck', recipients = "cmthomlinson@gmail.com")
-    msg.html  = render_template("notify.html", user = json_data['user'], results_link = results_link)
-    mail.send(msg)
-    return jsonify('Success')
+
 
 
 
