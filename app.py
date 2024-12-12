@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS, cross_origin
 import json
 import pymongo
+from pymongo import MongoClient
 from functools import wraps
 from bson import ObjectId, json_util
 import datetime
@@ -29,8 +30,10 @@ mail = Mail(app)
 jwt = JWTManager(app)
 
 
-client = pymongo.MongoClient(os.getenv("mongo_url"))
-db = client.test
+uri = "mongodb+srv://admin:1234@cluster.c3vxx.mongodb.net/?retryWrites=true&w=majority&appName=cluster"
+client = MongoClient(uri,
+                     tls=True)
+db = client['testDB']
 collection = db['Quakestar']
 issues = db['issues']
 users = db['users']
