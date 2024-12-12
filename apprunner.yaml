@@ -6,6 +6,6 @@ build:
       - pip install -r requirements.txt
 
 run:
-  command: gunicorn hello:app
+  command: gunicorn app:app
   network:
     port: 8000
